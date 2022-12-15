@@ -260,3 +260,150 @@ Stack trace:
 2022-09-11 04:17:56 pid:6582 Workerman[start2.php] stopping ...
 2022-09-11 04:17:56 pid:6582 Workerman[start2.php] has been stopped
 2022-09-11 04:17:56 pid:6655 Workerman[start2.php] start in DEBUG mode
+2022-12-15 10:53:27 pid:1004 Workerman[start2.php] start in DEBUG mode
+2022-12-15 10:53:50 pid:1081 Workerman[start2.php] start in DEBUG mode
+2022-12-15 10:54:37 pid:1081 Workerman[start2.php] stopping ...
+2022-12-15 10:54:37 pid:1081 Workerman[start2.php] has been stopped
+2022-12-15 10:54:47 pid:1212 Workerman[start.php] start in DEBUG mode
+2022-12-15 10:58:07 pid:1212 Workerman[start.php] stopping ...
+2022-12-15 10:58:07 pid:1212 Workerman[start.php] has been stopped
+2022-12-15 11:18:36 pid:1310 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:18:38 pid:1310 Workerman[start2.php] stopping ...
+2022-12-15 11:18:38 pid:1310 Workerman[start2.php] has been stopped
+2022-12-15 11:18:56 pid:1370 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:19:06 pid:1371 TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php:64
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php(64): count()
+#1 /home/enoch/phpdns/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#2 /home/enoch/phpdns/start2.php(38): Workerman\Connection\UdpConnection->send()
+#3 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#4 [internal function]: Workerman\Worker->acceptUdpConnection()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#8 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#9 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#10 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#11 /home/enoch/phpdns/start2.php(42): Workerman\Worker::runAll()
+#12 {main}
+2022-12-15 11:19:07 pid:1370 worker[none:1371] exit with status 64000
+2022-12-15 11:20:38 pid:1370 Workerman[start2.php] stopping ...
+2022-12-15 11:20:38 pid:1370 Workerman[start2.php] has been stopped
+2022-12-15 11:20:39 pid:1469 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:25:22 pid:1469 Workerman[start2.php] stopping ...
+2022-12-15 11:25:22 pid:1469 Workerman[start2.php] has been stopped
+2022-12-15 11:25:23 pid:1521 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:32:00 pid:1521 Workerman[start2.php] stopping ...
+2022-12-15 11:32:00 pid:1521 Workerman[start2.php] has been stopped
+2022-12-15 11:32:01 pid:1657 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:32:09 pid:1707 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:35:29 pid:1707 Workerman[start2.php] stopping ...
+2022-12-15 11:35:29 pid:1707 Workerman[start2.php] has been stopped
+2022-12-15 11:35:30 pid:1822 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:36:05 pid:1822 Workerman[start2.php] stopping ...
+2022-12-15 11:36:05 pid:1822 Workerman[start2.php] has been stopped
+2022-12-15 11:36:06 pid:1874 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:36:14 pid:1874 Workerman[start2.php] stopping ...
+2022-12-15 11:36:14 pid:1874 Workerman[start2.php] has been stopped
+2022-12-15 11:36:15 pid:1922 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:43:04 pid:1922 Workerman[start2.php] stopping ...
+2022-12-15 11:43:04 pid:1922 Workerman[start2.php] has been stopped
+2022-12-15 11:43:05 pid:2016 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:43:20 pid:2055 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:43:36 pid:2128 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:44:16 pid:2128 Workerman[start2.php] stopping ...
+2022-12-15 11:44:16 pid:2128 Workerman[start2.php] has been stopped
+2022-12-15 11:44:17 pid:2180 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:45:16 pid:2180 Workerman[start2.php] stopping ...
+2022-12-15 11:45:16 pid:2180 Workerman[start2.php] has been stopped
+2022-12-15 11:45:17 pid:2232 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:45:23 pid:2275 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:45:25 pid:2276 Error: Undefined constant "n" in /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php:60
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#1 /home/enoch/phpdns/start2.php(38): Workerman\Connection\UdpConnection->send()
+#2 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#3 [internal function]: Workerman\Worker->acceptUdpConnection()
+#4 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#8 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#9 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#10 /home/enoch/phpdns/start2.php(42): Workerman\Worker::runAll()
+#11 {main}
+2022-12-15 11:45:25 pid:2275 worker[none:2276] exit with status 64000
+2022-12-15 11:45:34 pid:2275 Workerman[start2.php] stopping ...
+2022-12-15 11:45:34 pid:2275 Workerman[start2.php] has been stopped
+2022-12-15 11:45:35 pid:2335 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:46:26 pid:2335 Workerman[start2.php] stopping ...
+2022-12-15 11:46:26 pid:2335 Workerman[start2.php] has been stopped
+2022-12-15 11:46:27 pid:2387 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:46:49 pid:2387 Workerman[start2.php] stopping ...
+2022-12-15 11:46:49 pid:2387 Workerman[start2.php] has been stopped
+2022-12-15 11:46:50 pid:2450 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:48:42 pid:2450 Workerman[start2.php] stopping ...
+2022-12-15 11:48:42 pid:2450 Workerman[start2.php] has been stopped
+2022-12-15 11:48:43 pid:2548 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:49:35 pid:2548 Workerman[start2.php] stopping ...
+2022-12-15 11:49:35 pid:2548 Workerman[start2.php] has been stopped
+2022-12-15 11:50:18 pid:2718 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:50:26 pid:2718 Workerman[start2.php] stopping ...
+2022-12-15 11:50:26 pid:2718 Workerman[start2.php] has been stopped
+2022-12-15 11:50:27 pid:2766 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:50:28 pid:2766 Workerman[start2.php] stopping ...
+2022-12-15 11:50:28 pid:2766 Workerman[start2.php] has been stopped
+2022-12-15 11:50:42 pid:2806 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:50:47 pid:2806 Workerman[start2.php] stopping ...
+2022-12-15 11:50:47 pid:2806 Workerman[start2.php] has been stopped
+2022-12-15 11:51:13 pid:2871 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:51:20 pid:2871 Workerman[start2.php] stopping ...
+2022-12-15 11:51:20 pid:2871 Workerman[start2.php] has been stopped
+2022-12-15 11:51:21 pid:2917 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:51:28 pid:2917 Workerman[start2.php] stopping ...
+2022-12-15 11:51:28 pid:2917 Workerman[start2.php] has been stopped
+2022-12-15 11:52:00 pid:3003 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:52:17 pid:3003 Workerman[start2.php] stopping ...
+2022-12-15 11:52:17 pid:3003 Workerman[start2.php] has been stopped
+2022-12-15 11:52:18 pid:3055 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:52:59 pid:3055 Workerman[start2.php] stopping ...
+2022-12-15 11:52:59 pid:3055 Workerman[start2.php] has been stopped
+2022-12-15 11:52:59 pid:3107 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:53:13 pid:3107 Workerman[start2.php] stopping ...
+2022-12-15 11:53:13 pid:3107 Workerman[start2.php] has been stopped
+2022-12-15 11:53:14 pid:3176 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:54:40 pid:3176 Workerman[start2.php] stopping ...
+2022-12-15 11:54:40 pid:3176 Workerman[start2.php] has been stopped
+2022-12-15 11:54:45 pid:3268 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:54:53 pid:3268 Workerman[start2.php] stopping ...
+2022-12-15 11:54:53 pid:3268 Workerman[start2.php] has been stopped
+2022-12-15 11:54:58 pid:3354 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:55:04 pid:3354 Workerman[start2.php] stopping ...
+2022-12-15 11:55:04 pid:3354 Workerman[start2.php] has been stopped
+2022-12-15 11:55:24 pid:3421 Workerman[start2.php] start in DEBUG mode
+2022-12-15 11:56:45 pid:3421 Workerman[start2.php] stopping ...
+2022-12-15 11:56:45 pid:3421 Workerman[start2.php] has been stopped
+2022-12-15 11:56:45 pid:3473 Workerman[start2.php] start in DEBUG mode
+2022-12-15 12:00:29 pid:3473 Workerman[start2.php] stopping ...
+2022-12-15 12:00:29 pid:3473 Workerman[start2.php] has been stopped
+2022-12-15 12:00:30 pid:3529 Workerman[start2.php] start in DEBUG mode
+2022-12-15 12:00:41 pid:3529 Workerman[start2.php] stopping ...
+2022-12-15 12:00:41 pid:3529 Workerman[start2.php] has been stopped
+2022-12-15 12:01:37 pid:3615 Workerman[start2.php] start in DEBUG mode
+2022-12-15 12:02:13 pid:3615 Workerman[start2.php] stopping ...
+2022-12-15 12:02:13 pid:3615 Workerman[start2.php] has been stopped
+2022-12-15 12:02:14 pid:3671 Workerman[start2.php] start in DEBUG mode
+2022-12-15 12:03:28 pid:3671 Workerman[start2.php] stopping ...
+2022-12-15 12:03:28 pid:3671 Workerman[start2.php] has been stopped
+2022-12-15 12:03:28 pid:3727 Workerman[start2.php] start in DEBUG mode
+2022-12-15 12:21:56 pid:3727 Workerman[start2.php] stopping ...
+2022-12-15 12:21:56 pid:3727 Workerman[start2.php] has been stopped
+2022-12-15 12:21:57 pid:3783 Workerman[start2.php] start in DEBUG mode
+2022-12-15 12:43:13 pid:3783 Workerman[start2.php] stopping ...
+2022-12-15 12:43:13 pid:3783 Workerman[start2.php] has been stopped
+2022-12-15 12:43:13 pid:3944 Workerman[start2.php] start in DEBUG mode
+2022-12-15 12:43:36 pid:3944 Workerman[start2.php] stopping ...
+2022-12-15 12:43:36 pid:3944 Workerman[start2.php] has been stopped
+2022-12-15 12:43:46 pid:4091 Workerman[start2.php] start in DEBUG mode
+2022-12-15 13:13:22 pid:4091 Workerman[start2.php] stopping ...
+2022-12-15 13:13:22 pid:4091 Workerman[start2.php] has been stopped

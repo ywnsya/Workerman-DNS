@@ -27,49 +27,88 @@ class Dns
         switch($type){
             case 'A':
                 $type='0001';
-                $lenth='0004';
+                #$lenth='0004';
                 $ip=$buffer->detail;
                 $n=0;
                 foreach($ip as $i){
                     $nss=explode('.',$i);
                     $detail[$n]='';
                     foreach($nss as $part){
-                        $tpart=dechex($part);
+                        $tpart=str_pad(dechex($part),2,"0",STR_PAD_LEFT);
                         $detail[$n]=$detail[$n].$tpart;
                     };
-                    $n+1;
+                    $lenth[$n]=str_pad(dechex((strlen($detail[$n])/2)),4,"0",STR_PAD_LEFT);
+                    $n=$n+1;
                 };
             break;
             case 'NS':
                 $type='0002';
-                $lenth='0004';
+                #$lenth='0004';
                 $ns=$buffer->detail;
                 $n=0;
                 foreach($ns as $i){
                     $nss=explode('.',$i);
                     $detail[$n]='';
                     foreach($nss as $part){
-                        $len=strlen($part); 
+                        #$len=strlen($part); 
+                        $len=str_pad(dechex(strlen($part)),2,"0",STR_PAD_LEFT);
                         $tpart=bin2hex($part);
                         $detail[$n]=$detail[$n].$len.$tpart;
                     };
                     $detail[$n]=$detail[$n].'00';
-                    $n+1;
+                    $lenth[$n]=str_pad(dechex((strlen($detail[$n])/2)),4,"0",STR_PAD_LEFT);
+                    $n=$n+1;
                 };
-                break;
+            break;
+            case 'PTR':
+                    $type='000C';
+                    $ns=$buffer->detail;
+                    $nss=explode('.',$ns);
+                    $detail[0]='';
+                    foreach($nss as $part){
+                        $len=str_pad(dechex(strlen($part)),2,"0",STR_PAD_LEFT);
+                        $tpart=bin2hex($part);
+                        $detail[0]=$detail[0].$len.$tpart;
+                    };
+                    $detail[0]=$detail[0].'00';
+                    $lenth[0]=str_pad(dechex((strlen($detail[0])/2)),4,"0",STR_PAD_LEFT);
+            break;
+            case 'CNAME':
+                $type='0005';
+                $ns=$buffer->detail;
+                $n=0;
+                foreach($ns as $i){
+                    $nss=explode('.',$i);
+                    $detail[$n]='';
+                    foreach($nss as $part){
+                        #$len=strlen($part); 
+                        $len=str_pad(dechex(strlen($part)),2,"0",STR_PAD_LEFT);
+                        $tpart=bin2hex($part);
+                        $detail[$n]=$detail[$n].$len.$tpart;
+                    };
+                    $detail[$n]=$detail[$n].'00';
+                    $lenth[$n]=str_pad(dechex((strlen($detail[$n])/2)),4,"0",STR_PAD_LEFT);
+                    $n=$n+1;
+                };
+            break;
         }
         $ttl=str_pad(dechex($buffer->ttl),8,"0",STR_PAD_LEFT);
         $status='8180';
         $questions='0001';
-        $AnswerRRs='0001';
+        $AnswerRRs=str_pad(count((array)$buffer->detail),4,"0",STR_PAD_LEFT);
+        #$AnswerRRs='0001';
         $AuthorityRRs='0000';
         $AdditionalRRs='0000';
         $answer='';
+        $n=0;
         foreach($detail as $c){
-            $answer=$answer.'C00C'.$type.'0001'.$ttl.$lenth.$c;
+            $rlenth='';
+            $rlenth=$lenth[$n];
+            $n=$n+1;
+            $answer=$answer.'C00C'.$type.'0001'.$ttl.$rlenth.$c;
         }
         $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query.$answer;
-
+        echo $response;
         return hex2bin($response);
     }
 
@@ -118,7 +157,7 @@ class Dns
     $query=substr($data,24);
 
     #$returndata="$type".'|||'."$realname";
-    $returndata= json_encode(array('type' => "$type", 'name' => "$realname", 'id'=>"$id", 'query'=>"$query"));
+    $returndata= json_encode(array('type' => $type, 'name' => "$realname", 'id'=>"$id", 'query'=>"$query"));
 
         return $returndata;
     }
