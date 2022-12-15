@@ -1,0 +1,262 @@
+2022-09-09 09:50:16 pid:3186 Workerman[start.php] start in DEBUG mode
+2022-09-09 09:50:17 pid:3186 Workerman[start.php] stopping ...
+2022-09-09 09:50:17 pid:3186 Workerman[start.php] has been stopped
+2022-09-09 09:59:23 pid:3842 Workerman[start.php] start in DEBUG mode
+2022-09-09 09:59:35 pid:3875 Workerman[start.php] start in DEBUG mode
+2022-09-09 09:59:57 pid:3875 Workerman[start.php] stopping ...
+2022-09-09 09:59:57 pid:3875 Workerman[start.php] has been stopped
+2022-09-09 10:00:00 pid:3973 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:00:14 pid:3975 TypeError: {closure}(): Argument #1 ($connection) must be of type Workerman\Connection\TcpConnection, Workerman\Connection\UdpConnection given, called in /home/enoch/dns/vendor/workerman/workerman/Worker.php on line 2579 and defined in /home/enoch/dns/start.php:14
+Stack trace:
+#0 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2579): {closure}()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /home/enoch/dns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /home/enoch/dns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /home/enoch/dns/start.php(22): Workerman\Worker::runAll()
+#9 {main}
+2022-09-09 10:00:14 pid:3973 worker[none:3975] exit with status 64000
+2022-09-09 10:00:16 pid:3976 TypeError: {closure}(): Argument #1 ($connection) must be of type Workerman\Connection\TcpConnection, Workerman\Connection\UdpConnection given, called in /home/enoch/dns/vendor/workerman/workerman/Worker.php on line 2579 and defined in /home/enoch/dns/start.php:14
+Stack trace:
+#0 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2579): {closure}()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /home/enoch/dns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /home/enoch/dns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /home/enoch/dns/start.php(22): Workerman\Worker::runAll()
+#9 {main}
+2022-09-09 10:00:16 pid:3973 worker[none:3976] exit with status 64000
+2022-09-09 10:00:18 pid:4156 TypeError: {closure}(): Argument #1 ($connection) must be of type Workerman\Connection\TcpConnection, Workerman\Connection\UdpConnection given, called in /home/enoch/dns/vendor/workerman/workerman/Worker.php on line 2579 and defined in /home/enoch/dns/start.php:14
+Stack trace:
+#0 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2579): {closure}()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /home/enoch/dns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /home/enoch/dns/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /home/enoch/dns/start.php(22): Workerman\Worker::runAll()
+#11 {main}
+2022-09-09 10:00:18 pid:3973 worker[none:4156] exit with status 64000
+2022-09-09 10:00:34 pid:3973 Workerman[start.php] stopping ...
+2022-09-09 10:00:34 pid:3973 Workerman[start.php] has been stopped
+2022-09-09 10:00:35 pid:4238 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:00:39 pid:4239 TypeError: {closure}(): Argument #1 ($connection) must be of type Workerman\Connection\TcpConnection, Workerman\Connection\UdpConnection given, called in /home/enoch/dns/vendor/workerman/workerman/Worker.php on line 2579 and defined in /home/enoch/dns/start.php:14
+Stack trace:
+#0 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2579): {closure}()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /home/enoch/dns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /home/enoch/dns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /home/enoch/dns/start.php(22): Workerman\Worker::runAll()
+#9 {main}
+2022-09-09 10:00:39 pid:4238 worker[none:4239] exit with status 64000
+2022-09-09 10:02:01 pid:4238 Workerman[start.php] stopping ...
+2022-09-09 10:02:01 pid:4238 Workerman[start.php] has been stopped
+2022-09-09 10:02:03 pid:4496 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:02:12 pid:4496 Workerman[start.php] stopping ...
+2022-09-09 10:02:12 pid:4496 Workerman[start.php] has been stopped
+2022-09-09 10:02:14 pid:4565 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:08:35 pid:4565 Workerman[start.php] stopping ...
+2022-09-09 10:08:35 pid:4565 Workerman[start.php] has been stopped
+2022-09-09 10:08:36 pid:5010 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:12:29 pid:5010 Workerman[start.php] stopping ...
+2022-09-09 10:12:29 pid:5010 Workerman[start.php] has been stopped
+2022-09-09 10:12:29 pid:5329 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:14:21 pid:5329 Workerman[start.php] stopping ...
+2022-09-09 10:14:21 pid:5329 Workerman[start.php] has been stopped
+2022-09-09 10:14:21 pid:5513 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:15:38 pid:5513 Workerman[start.php] stopping ...
+2022-09-09 10:15:38 pid:5513 Workerman[start.php] has been stopped
+2022-09-09 10:15:38 pid:5578 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:15:48 pid:5578 Workerman[start.php] stopping ...
+2022-09-09 10:15:48 pid:5578 Workerman[start.php] has been stopped
+2022-09-09 10:15:49 pid:5627 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:21:23 pid:5627 Workerman[start.php] stopping ...
+2022-09-09 10:21:23 pid:5627 Workerman[start.php] has been stopped
+2022-09-09 10:21:25 pid:6113 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:25:13 pid:6113 Workerman[start.php] stopping ...
+2022-09-09 10:25:13 pid:6113 Workerman[start.php] has been stopped
+2022-09-09 10:25:13 pid:6435 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:25:48 pid:6435 Workerman[start.php] stopping ...
+2022-09-09 10:25:48 pid:6435 Workerman[start.php] has been stopped
+2022-09-09 10:25:49 pid:6526 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:31:22 pid:6526 Workerman[start.php] stopping ...
+2022-09-09 10:31:22 pid:6526 Workerman[start.php] has been stopped
+2022-09-09 10:31:23 pid:7082 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:42:09 pid:7082 Workerman[start.php] stopping ...
+2022-09-09 10:42:09 pid:7082 Workerman[start.php] has been stopped
+2022-09-09 10:42:10 pid:7911 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:43:39 pid:7911 Workerman[start.php] stopping ...
+2022-09-09 10:43:39 pid:7911 Workerman[start.php] has been stopped
+2022-09-09 10:43:40 pid:7976 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:44:38 pid:7976 Workerman[start.php] stopping ...
+2022-09-09 10:44:38 pid:7976 Workerman[start.php] has been stopped
+2022-09-09 10:44:39 pid:8167 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:48:22 pid:8167 Workerman[start.php] stopping ...
+2022-09-09 10:48:22 pid:8167 Workerman[start.php] has been stopped
+2022-09-09 10:48:23 pid:8476 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:48:31 pid:8476 Workerman[start.php] stopping ...
+2022-09-09 10:48:31 pid:8476 Workerman[start.php] has been stopped
+2022-09-09 10:48:32 pid:8531 Workerman[start.php] start in DEBUG mode
+2022-09-09 10:49:11 pid:8531 Workerman[start.php] stopping ...
+2022-09-09 10:49:11 pid:8531 Workerman[start.php] has been stopped
+2022-09-09 10:49:12 pid:8604 Workerman[start.php] start in DEBUG mode
+2022-09-09 11:00:02 pid:8604 Workerman[start.php] stopping ...
+2022-09-09 11:00:02 pid:8604 Workerman[start.php] has been stopped
+2022-09-09 11:00:05 pid:9525 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:02:12 pid:9712 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:04:22 pid:9893 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:04:44 pid:9929 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:07:43 pid:10140 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:07:50 pid:10141 Error: Class "Dns" not found in /home/enoch/dns/vendor/workerman/workerman/Worker.php:2572
+Stack trace:
+#0 [internal function]: Workerman\Worker->acceptUdpConnection()
+#1 /home/enoch/dns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#2 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#3 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#4 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#5 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#6 /home/enoch/dns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#7 /home/enoch/dns/start2.php(13): Workerman\Worker::runAll()
+#8 {main}
+2022-09-09 11:07:50 pid:10140 worker[none:10141] exit with status 64000
+2022-09-09 11:08:03 pid:10140 Workerman[start2.php] stopping ...
+2022-09-09 11:08:03 pid:10140 Workerman[start2.php] has been stopped
+2022-09-09 11:08:03 pid:10349 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:08:06 pid:10350 Error: Class "dns" not found in /home/enoch/dns/vendor/workerman/workerman/Worker.php:2572
+Stack trace:
+#0 [internal function]: Workerman\Worker->acceptUdpConnection()
+#1 /home/enoch/dns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#2 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#3 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#4 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#5 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#6 /home/enoch/dns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#7 /home/enoch/dns/start2.php(13): Workerman\Worker::runAll()
+#8 {main}
+2022-09-09 11:08:06 pid:10349 worker[none:10350] exit with status 64000
+2022-09-09 11:08:09 pid:10349 Workerman[start2.php] stopping ...
+2022-09-09 11:08:09 pid:10349 Workerman[start2.php] has been stopped
+2022-09-09 11:09:22 pid:10436 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:09:26 pid:10437 Error: Class "Dns" not found in /home/enoch/dns/vendor/workerman/workerman/Worker.php:2572
+Stack trace:
+#0 [internal function]: Workerman\Worker->acceptUdpConnection()
+#1 /home/enoch/dns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#2 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#3 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#4 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#5 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#6 /home/enoch/dns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#7 /home/enoch/dns/start2.php(12): Workerman\Worker::runAll()
+#8 {main}
+2022-09-09 11:09:26 pid:10436 worker[none:10437] exit with status 64000
+2022-09-09 11:09:55 pid:10436 Workerman[start2.php] stopping ...
+2022-09-09 11:09:55 pid:10436 Workerman[start2.php] has been stopped
+2022-09-09 11:09:55 pid:10500 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:10:01 pid:10500 Workerman[start2.php] stopping ...
+2022-09-09 11:10:01 pid:10500 Workerman[start2.php] has been stopped
+2022-09-09 11:10:43 pid:10698 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:11:08 pid:10698 Workerman[start2.php] stopping ...
+2022-09-09 11:11:08 pid:10698 Workerman[start2.php] has been stopped
+2022-09-09 11:11:09 pid:10777 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:11:34 pid:10777 Workerman[start2.php] stopping ...
+2022-09-09 11:11:34 pid:10777 Workerman[start2.php] has been stopped
+2022-09-09 11:11:34 pid:10853 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:12:04 pid:10853 Workerman[start2.php] stopping ...
+2022-09-09 11:12:04 pid:10853 Workerman[start2.php] has been stopped
+2022-09-09 11:12:05 pid:11026 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:12:48 pid:11026 Workerman[start2.php] stopping ...
+2022-09-09 11:12:48 pid:11026 Workerman[start2.php] has been stopped
+2022-09-09 11:12:49 pid:11095 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:14:18 pid:11095 Workerman[start2.php] stopping ...
+2022-09-09 11:14:18 pid:11095 Workerman[start2.php] has been stopped
+2022-09-09 11:14:19 pid:11305 Workerman[start2.php] start in DEBUG mode
+2022-09-09 11:17:42 pid:11305 Workerman[start2.php] stopping ...
+2022-09-09 11:17:42 pid:11305 Workerman[start2.php] has been stopped
+2022-09-09 11:17:49 pid:11522 Workerman[start2.php] start in DEBUG mode
+2022-09-11 03:02:17 pid:771 Workerman[start.php] start in DEBUG mode
+2022-09-11 03:02:19 pid:771 Workerman[start.php] stopping ...
+2022-09-11 03:02:19 pid:771 Workerman[start.php] has been stopped
+2022-09-11 03:02:22 pid:806 Workerman[start.php] start in DEBUG mode
+2022-09-11 03:03:22 pid:806 Workerman[start.php] stopping ...
+2022-09-11 03:03:22 pid:806 Workerman[start.php] has been stopped
+2022-09-11 03:03:25 pid:934 Workerman[start2.php] start in DEBUG mode
+2022-09-11 03:04:08 pid:934 Workerman[start2.php] stopping ...
+2022-09-11 03:04:08 pid:934 Workerman[start2.php] has been stopped
+2022-09-11 03:04:11 pid:1125 Workerman[start2.php] start in DEBUG mode
+2022-09-11 03:05:54 pid:1125 Workerman[start2.php] stopping ...
+2022-09-11 03:05:54 pid:1125 Workerman[start2.php] has been stopped
+2022-09-11 03:05:55 pid:1199 Workerman[start2.php] start in DEBUG mode
+2022-09-11 03:07:26 pid:1199 Workerman[start2.php] stopping ...
+2022-09-11 03:07:26 pid:1199 Workerman[start2.php] has been stopped
+2022-09-11 03:07:26 pid:1395 Workerman[start2.php] start in DEBUG mode
+2022-09-11 03:18:17 pid:1395 Workerman[start2.php] stopping ...
+2022-09-11 03:18:17 pid:1395 Workerman[start2.php] has been stopped
+2022-09-11 03:18:18 pid:2201 Workerman[start2.php] start in DEBUG mode
+2022-09-11 03:18:21 pid:2202 TypeError: explode(): Argument #2 ($string) must be of type string, array given in /home/enoch/dns/start2.php:10
+Stack trace:
+#0 /home/enoch/dns/start2.php(10): explode()
+#1 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#2 [internal function]: Workerman\Worker->acceptUdpConnection()
+#3 /home/enoch/dns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#4 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#5 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#6 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#7 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#8 /home/enoch/dns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#9 /home/enoch/dns/start2.php(21): Workerman\Worker::runAll()
+#10 {main}
+2022-09-11 03:18:21 pid:2201 worker[none:2202] exit with status 64000
+2022-09-11 03:18:37 pid:2201 Workerman[start2.php] stopping ...
+2022-09-11 03:18:37 pid:2201 Workerman[start2.php] has been stopped
+2022-09-11 03:18:38 pid:2259 Workerman[start2.php] start in DEBUG mode
+2022-09-11 03:19:36 pid:2259 Workerman[start2.php] stopping ...
+2022-09-11 03:19:36 pid:2259 Workerman[start2.php] has been stopped
+2022-09-11 03:19:36 pid:2332 Workerman[start2.php] start in DEBUG mode
+2022-09-11 03:19:39 pid:2333 Error: Cannot use object of type stdClass as array in /home/enoch/dns/start2.php:11
+Stack trace:
+#0 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /home/enoch/dns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /home/enoch/dns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /home/enoch/dns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /home/enoch/dns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /home/enoch/dns/start2.php(21): Workerman\Worker::runAll()
+#9 {main}
+2022-09-11 03:19:39 pid:2332 worker[none:2333] exit with status 64000
+2022-09-11 03:20:52 pid:2332 Workerman[start2.php] stopping ...
+2022-09-11 03:20:52 pid:2332 Workerman[start2.php] has been stopped
+2022-09-11 03:20:53 pid:2523 Workerman[start2.php] start in DEBUG mode
+2022-09-11 04:11:46 pid:2523 Workerman[start2.php] stopping ...
+2022-09-11 04:11:47 pid:2523 Workerman[start2.php] has been stopped
+2022-09-11 04:11:48 pid:5867 Workerman[start2.php] start in DEBUG mode
+2022-09-11 04:12:26 pid:5867 Workerman[start2.php] stopping ...
+2022-09-11 04:12:26 pid:5867 Workerman[start2.php] has been stopped
+2022-09-11 04:12:27 pid:6044 Workerman[start2.php] start in DEBUG mode
+2022-09-11 04:14:22 pid:6044 Workerman[start2.php] stopping ...
+2022-09-11 04:14:22 pid:6044 Workerman[start2.php] has been stopped
+2022-09-11 04:14:23 pid:6275 Workerman[start2.php] start in DEBUG mode
+2022-09-11 04:15:25 pid:6275 Workerman[start2.php] stopping ...
+2022-09-11 04:15:25 pid:6275 Workerman[start2.php] has been stopped
+2022-09-11 04:15:25 pid:6384 Workerman[start2.php] start in DEBUG mode
+2022-09-11 04:17:11 pid:6384 Workerman[start2.php] stopping ...
+2022-09-11 04:17:11 pid:6384 Workerman[start2.php] has been stopped
+2022-09-11 04:17:11 pid:6582 Workerman[start2.php] start in DEBUG mode
+2022-09-11 04:17:56 pid:6582 Workerman[start2.php] stopping ...
+2022-09-11 04:17:56 pid:6582 Workerman[start2.php] has been stopped
+2022-09-11 04:17:56 pid:6655 Workerman[start2.php] start in DEBUG mode
