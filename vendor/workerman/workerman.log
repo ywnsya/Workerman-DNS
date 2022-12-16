@@ -407,3 +407,190 @@ Stack trace:
 2022-12-15 12:43:46 pid:4091 Workerman[start2.php] start in DEBUG mode
 2022-12-15 13:13:22 pid:4091 Workerman[start2.php] stopping ...
 2022-12-15 13:13:22 pid:4091 Workerman[start2.php] has been stopped
+2022-12-16 11:01:11 pid:566 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:01:22 pid:567 TypeError: Cannot access offset of type string on string in /home/enoch/phpdns/start2.php:62
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /home/enoch/phpdns/start2.php(95): Workerman\Worker::runAll()
+#9 {main}
+2022-12-16 11:01:22 pid:566 worker[none:567] exit with status 64000
+2022-12-16 11:02:54 pid:566 Workerman[start2.php] stopping ...
+2022-12-16 11:02:54 pid:566 Workerman[start2.php] has been stopped
+2022-12-16 11:02:55 pid:666 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:02:58 pid:667 TypeError: Cannot access offset of type string on string in /home/enoch/phpdns/start2.php:62
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /home/enoch/phpdns/start2.php(95): Workerman\Worker::runAll()
+#9 {main}
+2022-12-16 11:02:58 pid:666 worker[none:667] exit with status 64000
+2022-12-16 11:04:08 pid:666 Workerman[start2.php] stopping ...
+2022-12-16 11:04:08 pid:666 Workerman[start2.php] has been stopped
+2022-12-16 11:04:09 pid:719 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:04:11 pid:720 TypeError: Cannot access offset of type string on string in /home/enoch/phpdns/start2.php:63
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /home/enoch/phpdns/start2.php(95): Workerman\Worker::runAll()
+#9 {main}
+2022-12-16 11:04:11 pid:719 worker[none:720] exit with status 64000
+2022-12-16 11:04:44 pid:719 Workerman[start2.php] stopping ...
+2022-12-16 11:04:44 pid:719 Workerman[start2.php] has been stopped
+2022-12-16 11:04:46 pid:783 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:04:47 pid:784 Error: Cannot use object of type stdClass as array in /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php:97
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#1 /home/enoch/phpdns/start2.php(92): Workerman\Connection\UdpConnection->send()
+#2 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#3 [internal function]: Workerman\Worker->acceptUdpConnection()
+#4 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#8 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#9 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#10 /home/enoch/phpdns/start2.php(96): Workerman\Worker::runAll()
+#11 {main}
+2022-12-16 11:04:47 pid:783 worker[none:784] exit with status 64000
+2022-12-16 11:05:35 pid:783 Workerman[start2.php] stopping ...
+2022-12-16 11:05:35 pid:783 Workerman[start2.php] has been stopped
+2022-12-16 11:05:36 pid:842 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:05:38 pid:843 Error: Cannot use object of type stdClass as array in /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php:98
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#1 /home/enoch/phpdns/start2.php(92): Workerman\Connection\UdpConnection->send()
+#2 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#3 [internal function]: Workerman\Worker->acceptUdpConnection()
+#4 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#8 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#9 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#10 /home/enoch/phpdns/start2.php(96): Workerman\Worker::runAll()
+#11 {main}
+2022-12-16 11:05:38 pid:842 worker[none:843] exit with status 64000
+2022-12-16 11:06:00 pid:842 Workerman[start2.php] stopping ...
+2022-12-16 11:06:00 pid:842 Workerman[start2.php] has been stopped
+2022-12-16 11:06:02 pid:903 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:06:02 pid:903 Workerman[start2.php] stopping ...
+2022-12-16 11:06:02 pid:903 Workerman[start2.php] has been stopped
+2022-12-16 11:07:17 pid:950 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:07:19 pid:951 Error: Cannot use object of type stdClass as array in /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php:98
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#1 /home/enoch/phpdns/start2.php(92): Workerman\Connection\UdpConnection->send()
+#2 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#3 [internal function]: Workerman\Worker->acceptUdpConnection()
+#4 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#8 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#9 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#10 /home/enoch/phpdns/start2.php(96): Workerman\Worker::runAll()
+#11 {main}
+2022-12-16 11:07:19 pid:950 worker[none:951] exit with status 64000
+2022-12-16 11:08:12 pid:950 Workerman[start2.php] stopping ...
+2022-12-16 11:08:12 pid:950 Workerman[start2.php] has been stopped
+2022-12-16 11:08:13 pid:1002 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:08:14 pid:1003 Error: Cannot use object of type stdClass as array in /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php:99
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#1 /home/enoch/phpdns/start2.php(92): Workerman\Connection\UdpConnection->send()
+#2 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#3 [internal function]: Workerman\Worker->acceptUdpConnection()
+#4 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#8 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#9 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#10 /home/enoch/phpdns/start2.php(96): Workerman\Worker::runAll()
+#11 {main}
+2022-12-16 11:08:14 pid:1002 worker[none:1003] exit with status 64000
+2022-12-16 11:08:37 pid:1002 Workerman[start2.php] stopping ...
+2022-12-16 11:08:37 pid:1002 Workerman[start2.php] has been stopped
+2022-12-16 11:08:38 pid:1058 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:08:48 pid:1058 Workerman[start2.php] stopping ...
+2022-12-16 11:08:48 pid:1058 Workerman[start2.php] has been stopped
+2022-12-16 11:10:18 pid:1179 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:10:20 pid:1180 Error: Cannot use object of type stdClass as array in /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php:106
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#1 /home/enoch/phpdns/start2.php(104): Workerman\Connection\UdpConnection->send()
+#2 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#3 [internal function]: Workerman\Worker->acceptUdpConnection()
+#4 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#8 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#9 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#10 /home/enoch/phpdns/start2.php(108): Workerman\Worker::runAll()
+#11 {main}
+2022-12-16 11:10:20 pid:1179 worker[none:1180] exit with status 64000
+2022-12-16 11:12:08 pid:1179 Workerman[start2.php] stopping ...
+2022-12-16 11:12:08 pid:1179 Workerman[start2.php] has been stopped
+2022-12-16 11:12:09 pid:1236 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:12:13 pid:1236 Workerman[start2.php] stopping ...
+2022-12-16 11:12:14 pid:1236 Workerman[start2.php] has been stopped
+2022-12-16 11:12:28 pid:1301 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:12:33 pid:1301 Workerman[start2.php] stopping ...
+2022-12-16 11:12:33 pid:1301 Workerman[start2.php] has been stopped
+2022-12-16 11:33:45 pid:1554 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:34:21 pid:1554 Workerman[start2.php] stopping ...
+2022-12-16 11:34:21 pid:1554 Workerman[start2.php] has been stopped
+2022-12-16 11:34:22 pid:1644 Workerman[start2.php] start in DEBUG mode
+2022-12-16 11:35:08 pid:1644 Workerman[start2.php] stopping ...
+2022-12-16 11:35:08 pid:1644 Workerman[start2.php] has been stopped
+2022-12-16 11:51:43 pid:1748 Workerman[start2.php] start in DEBUG mode
+2022-12-16 12:10:13 pid:1748 Workerman[start2.php] stopping ...
+2022-12-16 12:10:13 pid:1748 Workerman[start2.php] has been stopped
+2022-12-16 12:10:14 pid:1892 Workerman[start2.php] start in DEBUG mode
+2022-12-16 12:10:28 pid:1893 TypeError: explode(): Argument #2 ($string) must be of type string, stdClass given in /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php:156
+Stack trace:
+#0 /home/enoch/phpdns/vendor/workerman/workerman/Protocols/Dns.php(156): explode()
+#1 /home/enoch/phpdns/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#2 /home/enoch/phpdns/start2.php(123): Workerman\Connection\UdpConnection->send()
+#3 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#4 [internal function]: Workerman\Worker->acceptUdpConnection()
+#5 /home/enoch/phpdns/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#6 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#7 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#8 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#9 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#10 /home/enoch/phpdns/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#11 /home/enoch/phpdns/start2.php(127): Workerman\Worker::runAll()
+#12 {main}
+2022-12-16 12:10:28 pid:1892 worker[none:1893] exit with status 64000
+2022-12-16 12:10:29 pid:1892 Workerman[start2.php] stopping ...
+2022-12-16 12:10:29 pid:1892 Workerman[start2.php] has been stopped
+2022-12-16 12:13:59 pid:1998 Workerman[start2.php] start in DEBUG mode
+2022-12-16 12:14:35 pid:1998 Workerman[start2.php] stopping ...
+2022-12-16 12:14:35 pid:1998 Workerman[start2.php] has been stopped
+2022-12-16 12:14:36 pid:2050 Workerman[start2.php] start in DEBUG mode
+2022-12-16 12:14:40 pid:2050 Workerman[start2.php] stopping ...
+2022-12-16 12:14:40 pid:2050 Workerman[start2.php] has been stopped
+2022-12-16 12:24:20 pid:2191 Workerman[start.php] start in DEBUG mode
+2022-12-16 12:24:22 pid:2191 Workerman[start.php] stopping ...
+2022-12-16 12:24:22 pid:2191 Workerman[start.php] has been stopped
