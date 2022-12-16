@@ -1,6 +1,6 @@
 # Workerman-DNS
 
-Workerman的DNS协议，实现了简单的DNS协议解析和相应
+Workerman的DNS协议，实现了简单的DNS协议解析和响应
 
 目前支持以下DNS类型：
 
@@ -15,8 +15,6 @@ Workerman的DNS协议，实现了简单的DNS协议解析和相应
 > 本仓库内vendor文件夹为[Workerman](https://www.workerman.net/)
 >
 > 您可以删除，直接将本仓库根目录下的 Dns.php 放置到您的Workerman项目中的 /vendor/workerman/workerman/Protocols 目录下
-
-
 
 ---
 
