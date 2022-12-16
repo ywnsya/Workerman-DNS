@@ -1,6 +1,6 @@
 # Workerman-DNS
 
-Workerman的DNS协议，实现了简单的DNS协议解析和响应
+[Workerman](https://www.workerman.net/)的DNS协议，实现了简单的DNS协议解析和响应，通过本协议支持，您可以利用[Workerman](https://www.workerman.net/)实现基于PHP的Dns服务器
 
 目前支持以下DNS类型：
 
