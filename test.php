@@ -1,3 +1,20 @@
 <?php
-print_r(dns_get_record('cname.n2n.icu',DNS_A));
+#print_r(dns_get_record('icu',DNS_SOA));
+$url='al.c919.n3n.com.cn';
+while(true){
+preg_match("#\.(.*)#i",$url,$match);//获取根域名
+$domin = $match[1];
+print_r($domin);
+$soa=dns_get_record($domin,DNS_SOA);
+if(array_key_exists('0',$soa)){
+    if(array_key_exists('mname',$soa[0])){
+    print_r($soa[0]);
+    break;
+    }else{
+        $url=$domin;
+    }
+}else{
+    $url=$domin;
+}
+}
 ?>

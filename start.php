@@ -33,7 +33,7 @@ if($type=='A'){
 };
 
 #此处进行一个CNAME+A记录返回的实例
-if($type=='A' && $name='cn.bing.com'){
+if($type=='A' && $name=='cn.bing.com'){
     $send['type']='CNAME+A';
     #CNAME+A和CNAME+AAAA的情况下，均只会返回一条CNAME，如多条CNAME的均衡负载请通过您的代码在此处服务端实现
     $send['detail']='china.bing123.com';
@@ -83,6 +83,13 @@ if($type=='AAAA'){
     $send['detail'][2]=bin2hex($ipv6->ip2bin("2001:0:2851:b9d0:2c5f:f0d9:21be:4b96"));
     $send['ttl']=600;
 }
+#此处进行一个CNAME+AAAA记录返回的实例
+if($type=='AAAA' && $name=='cname6.xx.com'){
+    $send['type']='CNAME+AAAA';
+    #CNAME+A和CNAME+AAAA的情况下，均只会返回一条CNAME，如多条CNAME的均衡负载请通过您的代码在此处服务端实现
+    $send['detail']='ipv6.xx.com';
+    $send['ttl']=30;
+}
 
 if($type=='TEXT'){
     $send['type']='TEXT';
@@ -102,8 +109,7 @@ if($type=='MX'){
     $send['ttl']=600;
 }
 
-#无记录情况下返回SOA记录或域名不存在记录，防止报错
-if( (!isset($send['type'])) || (!isset($send['detail'])) || (!isset($send['ttl'])) || $type=='SOA'){
+if($type=='SOA'){
 
     $send['type']='SOA';
     $send['detail']= array();
@@ -129,7 +135,16 @@ if( (!isset($send['type'])) || (!isset($send['detail'])) || (!isset($send['ttl']
      **/
 
      
-};
+}
+
+#返回域名不存在(自动获取SOA)
+if($name=='phpisthebestlanguage.com'){
+    $send['type']='none';
+    $send['detail']="$name";
+}
+
+
+
 
 #id和query一般情况下直接返回输出即可
 $send['id']=$data->id;
