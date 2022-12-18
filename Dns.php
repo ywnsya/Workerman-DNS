@@ -30,6 +30,7 @@ class Dns
      */
     public static function encode($buffer)
     {
+        
         $buffer=json_decode($buffer);
         $type=$buffer->type;
         switch($type){
@@ -98,6 +99,110 @@ class Dns
                     $lenth[$n]=str_pad(dechex((strlen($detail[$n])/2)),4,"0",STR_PAD_LEFT);
                     $n=$n+1;
                 };
+            break;
+            case 'CNAME+A':
+                $type='0005';
+                $ns=$buffer->detail;
+                $nss=explode('.',$ns);
+                $detail[0]='';
+                foreach($nss as $part){
+                    $len=str_pad(dechex(strlen($part)),2,"0",STR_PAD_LEFT);
+                    $tpart=bin2hex($part);
+                    $detail[0]=$detail[0].$len.$tpart;
+                };
+                $detail[0]=$detail[0].'00';
+                $lenth[0]=str_pad(dechex((strlen($detail[0])/2)),4,"0",STR_PAD_LEFT);
+
+                $ttl=str_pad(dechex($buffer->ttl),8,"0",STR_PAD_LEFT);
+                
+                $answer='';
+                $answer=$answer.'C00C'.$type.'0001'.$ttl.$lenth[0].$detail[0];
+                
+                $ip=dns_get_record($ns,DNS_A);
+                $type='0001';
+                $n=0;
+                foreach($ip as $i){
+                    $ttl=str_pad(dechex($i['ttl']),8,"0",STR_PAD_LEFT);
+                    $i=$i['ip'];
+                    $nss=explode('.',$i);
+                    $detail[$n]='';
+                    foreach($nss as $part){
+                        $tpart=str_pad(dechex($part),2,"0",STR_PAD_LEFT);
+                        $detail[$n]=$detail[$n].$tpart;
+                    };
+                    $lenth[$n]=str_pad(dechex((strlen($detail[$n])/2)),4,"0",STR_PAD_LEFT);
+                    $n=$n+1;
+                    
+                };
+                $n=0;
+                foreach($detail as $c){
+                    $rlenth='';
+                    $rlenth=$lenth[$n];
+                    $n=$n+1;
+                    $answer=$answer.'C02B'.$type.'0001'.$ttl.$rlenth.$c;
+                }
+
+                $status='8180';
+                $questions='0001';
+                $AuthorityRRs='0000';
+                $AdditionalRRs='0000';
+
+                $AnswerRRs=str_pad((count((array)$ip)+1),4,"0",STR_PAD_LEFT);
+
+                $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query.$answer;
+                return hex2bin($response);
+
+            break;
+            case 'CNAME+AAAA':
+                $type='0005';
+                $ns=$buffer->detail;
+                $nss=explode('.',$ns);
+                $detail[0]='';
+                foreach($nss as $part){
+                    $len=str_pad(dechex(strlen($part)),2,"0",STR_PAD_LEFT);
+                    $tpart=bin2hex($part);
+                    $detail[0]=$detail[0].$len.$tpart;
+                };
+                $detail[0]=$detail[0].'00';
+                $lenth[0]=str_pad(dechex((strlen($detail[0])/2)),4,"0",STR_PAD_LEFT);
+
+                $ttl=str_pad(dechex($buffer->ttl),8,"0",STR_PAD_LEFT);
+                
+                $answer='';
+                $answer=$answer.'C00C'.$type.'0001'.$ttl.$lenth[0].$detail[0];
+                
+                $ip=dns_get_record($ns,DNS_AAAA);
+                $type='001C';
+                $n=0;
+                foreach($ip as $i){
+                    $ipv6=$i['ipv6'];
+                    $hexstr = unpack("H*hex", inet_pton($ipv6));
+                    $ipv6=substr(preg_replace("/([A-f0-9]{4})/", "$1:", $hexstr['hex']), 0, -1);
+                    $ipv6=str_replace(':','',$ipv6);
+                    #$ipv6= bin2hex($ipv6);
+                    $detail[$n]="$ipv6";
+                    $lenth[$n]="0010";
+                    $n=$n+1;
+                };
+
+                $n=0;
+                foreach($detail as $c){
+                    $rlenth='';
+                    $rlenth=$lenth[$n];
+                    $n=$n+1;
+                    $answer=$answer.'C02C'.$type.'0001'.$ttl.$rlenth.$c;
+                }
+
+                $status='8180';
+                $questions='0001';
+                $AuthorityRRs='0000';
+                $AdditionalRRs='0000';
+
+                $AnswerRRs=str_pad((count((array)$ip)+1),4,"0",STR_PAD_LEFT);
+
+                $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query.$answer;
+                return hex2bin($response);
+
             break;
             case 'SOA':
                 $type='0006';
@@ -174,12 +279,74 @@ class Dns
                     $n=$n+1;
                 };
             break;
+            case 'none':
+                $type='0006';
+                $ns=$buffer->detail;
+                $url=$ns;
+                while(true){
+                preg_match("#\.(.*)#i",$url,$match);//获取根域名
+                $domin = $match[1];
+                $soa=dns_get_record($domin,DNS_SOA);
+                if(array_key_exists('0',$soa)){
+                    if(array_key_exists('mname',$soa[0])){
+                    $qname=$domin;
+                    $ns=$soa[0];
+                    break;
+                    }else{
+                        $url=$domin;
+                    }
+                }else{
+                    $url=$domin;
+                }
+                }
+
+                    $nss=explode('.',$ns['mname']);
+                    $detail='';
+                    foreach($nss as $part){
+                        $len=str_pad(dechex(strlen($part)),2,"0",STR_PAD_LEFT);
+                        $tpart=bin2hex($part);
+                        $detail=$detail.$len.$tpart;
+                    };
+                    $detail=$detail.'00';
+                    unset($nss,$len,$tpart);
+                    $nss=explode('.',$ns['rname']);
+                    foreach($nss as $part){
+                        $len=str_pad(dechex(strlen($part)),2,"0",STR_PAD_LEFT);
+                        $tpart=bin2hex($part);
+                        $detail=$detail.$len.$tpart;
+                    };
+                    $detail=$detail.'00'.str_pad(dechex($ns['serial']),8,"0",STR_PAD_LEFT).str_pad(dechex($ns['refresh']),8,"0",STR_PAD_LEFT).str_pad(dechex($ns['retry']),8,"0",STR_PAD_LEFT).str_pad(dechex($ns['expire']),8,"0",STR_PAD_LEFT).str_pad(dechex($ns['minimum-ttl']),8,"0",STR_PAD_LEFT);
+
+
+                    $lenth=str_pad(dechex((strlen($detail)/2)),4,"0",STR_PAD_LEFT);
+                    $ttl=str_pad(dechex($buffer->ttl),8,"0",STR_PAD_LEFT);
+                    $status='8183';
+                    $questions='0001';
+                    $AnswerRRs='0000';
+                    $AuthorityRRs='0001';
+                    $AdditionalRRs='0000';
+
+                    #$qname
+                    $nss=explode('.',$qname);
+                    $qname='';
+                    foreach($nss as $part){
+                        #$len=strlen($part); 
+                        $len=str_pad(dechex(strlen($part)),2,"0",STR_PAD_LEFT);
+                        $tpart=bin2hex($part);
+                        $qname=$qname.$len.$tpart;
+                    };
+                    $qname=$qname.'00';
+
+                    $answer='';                    
+                    $answer=$answer.$qname.$type.'0001'.$ttl.$lenth.$detail;
+                    $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query.$answer;
+                    return hex2bin($response);
+            break;
         }
         $ttl=str_pad(dechex($buffer->ttl),8,"0",STR_PAD_LEFT);
         $status='8180';
         $questions='0001';
         $AnswerRRs=str_pad(count((array)$buffer->detail),4,"0",STR_PAD_LEFT);
-        #$AnswerRRs='0001';
         $AuthorityRRs='0000';
         $AdditionalRRs='0000';
         $answer='';
