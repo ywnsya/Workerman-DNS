@@ -99,6 +99,59 @@ class Dns
                     $n=$n+1;
                 };
             break;
+            case 'CNAME+A':
+                $type='0005';
+                $ns=$buffer->detail;
+                $nss=explode('.',$ns);
+                $detail[0]='';
+                foreach($nss as $part){
+                    $len=str_pad(dechex(strlen($part)),2,"0",STR_PAD_LEFT);
+                    $tpart=bin2hex($part);
+                    $detail[0]=$detail[0].$len.$tpart;
+                };
+                $detail[0]=$detail[0].'00';
+                $lenth[0]=str_pad(dechex((strlen($detail[0])/2)),4,"0",STR_PAD_LEFT);
+
+                $ttl=str_pad(dechex($buffer->ttl),8,"0",STR_PAD_LEFT);
+                
+                $answer='';
+                $answer=$answer.'C00C'.$type.'0001'.$ttl.$lenth[0].$detail[0];
+                
+                $ip=dns_get_record($ns,DNS_A);
+                $type='0001';
+                $n=0;
+                foreach($ip as $i){
+                    $ttl=str_pad(dechex($i['ttl']),8,"0",STR_PAD_LEFT);
+                    $i=$i['ip'];
+                    $nss=explode('.',$i);
+                    $detail[$n]='';
+                    foreach($nss as $part){
+                        $tpart=str_pad(dechex($part),2,"0",STR_PAD_LEFT);
+                        $detail[$n]=$detail[$n].$tpart;
+                    };
+                    $lenth[$n]=str_pad(dechex((strlen($detail[$n])/2)),4,"0",STR_PAD_LEFT);
+                    $n=$n+1;
+                    
+                };
+                $n=0;
+                foreach($detail as $c){
+                    $rlenth='';
+                    $rlenth=$lenth[$n];
+                    $n=$n+1;
+                    $answer=$answer.'C02B'.$type.'0001'.$ttl.$rlenth.$c;
+                }
+
+                $status='8180';
+                $questions='0001';
+                $AuthorityRRs='0000';
+                $AdditionalRRs='0000';
+
+                $AnswerRRs=str_pad((count((array)$ip)+1),4,"0",STR_PAD_LEFT);
+
+                $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query.$answer;
+                return hex2bin($response);
+
+            break;
             case 'SOA':
                 $type='0006';
                 $ns=$buffer->detail;
@@ -179,7 +232,6 @@ class Dns
         $status='8180';
         $questions='0001';
         $AnswerRRs=str_pad(count((array)$buffer->detail),4,"0",STR_PAD_LEFT);
-        #$AnswerRRs='0001';
         $AuthorityRRs='0000';
         $AdditionalRRs='0000';
         $answer='';

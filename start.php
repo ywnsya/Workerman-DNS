@@ -32,6 +32,15 @@ if($type=='A'){
     $send['ttl']=30;
 };
 
+#此处进行一个CNAME+A记录返回的实例
+if($type=='A' && $name='cn.bing.com'){
+    $send['type']='CNAME+A';
+    #CNAME+A和CNAME+AAAA的情况下，均只会返回一条CNAME，如多条CNAME的均衡负载请通过您的代码在此处服务端实现
+    $send['detail']='china.bing123.com';
+    $send['ttl']=30;
+};
+
+
 
 if($type=='PTR'){
     /**
@@ -52,6 +61,7 @@ if($type=='NS'){
     $send['ttl']=600;
 };
 
+#实际情况下很少直接返回CNAME，真实情况一般是CNAME+A同时还有CNAME+AAAA
 if($type=='CNAME'){
     $send['type']='CNAME';
     $send['detail'][1]='baidu.cn';
