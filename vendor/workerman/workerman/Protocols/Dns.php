@@ -369,8 +369,11 @@ class Dns
      */
     public static function decode($buffer)
     {
+    /** 
         $data=bin2hex($buffer);
+        echo $data;
         $id=substr($data,0,4);
+        $flag=substr($data,5,4);
     $type=substr($data,-8,4);
     switch($type){
         case '0001':
@@ -410,8 +413,59 @@ class Dns
     }
     $realname=substr($realname,1,-1);
     $query=substr($data,24);
+    ***/
 
     #$returndata="$type".'|||'."$realname";
+    $data=bin2hex($buffer);
+    $id=substr($data,0,4);
+$flag=substr($data,4,4);
+$questions=substr($data,8,4);
+$answerRRs=substr($data,12,4);
+$authorityRRs=substr($data,16,4);
+$additionalRRs=substr($data,20,4);
+$startbyte=24;
+$dlen=substr($data,$startbyte,2);
+$startbyte=26;
+$i=1;
+while($dlen!='00'){
+$domain[$i]=hex2bin(substr($data,$startbyte,hexdec($dlen)*2));
+$startbyte=$startbyte+(hexdec($dlen)*2);
+$dlen=substr($data,$startbyte,2);
+$startbyte=$startbyte+2;
+$i++;
+}
+$realname=join(".",$domain);
+$type=substr($data,$startbyte,4);
+switch($type){
+    case '0001':
+        $type='A';
+        break;
+    case '0002':
+        $type='NS';
+        break;
+    case '000c':
+        $type='PTR';
+        break;
+    case '0006':
+        $type='SOA';
+        break;
+    case '001c':
+        $type='AAAA';
+        break;
+    case '0005':
+        $type='CNAME';
+        break;
+    case '0010':
+        $type='TEXT';
+        break;
+    case '000f':
+        $type='MX';
+        break;                                
+}
+$query=substr($data,24,$startbyte-16);
+echo $query."\n";
+
+
     $returndata= json_encode(array('type' => $type, 'name' => "$realname", 'id'=>"$id", 'query'=>"$query"));
 
         return $returndata;
