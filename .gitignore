@@ -1,3 +1,4 @@
 .history
 *.log
 *.pid
+vendor/workerman/workerman.log
