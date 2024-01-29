@@ -463,7 +463,6 @@ switch($type){
         break;                                
 }
 $query=substr($data,24,$startbyte-16);
-echo $query."\n";
 
 
     $returndata= json_encode(array('type' => $type, 'name' => "$realname", 'id'=>"$id", 'query'=>"$query"));
