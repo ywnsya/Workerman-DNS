@@ -10,6 +10,15 @@
 namespace Workerman\Protocols;
 class Dns
 {
+    public static function send($response,$query,$info){
+       $response=hex2bin($response);
+       $traffic=strlen($response);
+       $info=json_decode($info);
+       #var_dump($info);
+       #出流量统计
+       #您也可以在此处保存$response,下一次通过raw类型实现快速缓存相应.
+       return $response;
+    }
     /**
      * 检查包的完整性
      * 如果能够得到包长，则返回包的在buffer中的长度，否则返回0继续等待数据
@@ -19,8 +28,7 @@ class Dns
      */
     public static function input($buffer)
     {
-        
-        return 200;
+        return 512;
     }
 
     /**
@@ -34,6 +42,39 @@ class Dns
         $buffer=json_decode($buffer);
         $type=$buffer->type;
         switch($type){
+            case 'raw':
+                return Dns::send($buffer->detail,$buffer->query,$buffer->info);
+            break;
+            case 'flag':
+                if($buffer->flag=='NXDOMAIN'){
+                    $status='8183';
+                    $questions='0001';
+                    $AnswerRRs='0000';
+                    $AuthorityRRs='0001';
+                    /**
+                     * NXDOMAIN应当返回SOA记录，主要内容是TTL，LDNS会在SOA的TTL到期前缓存该FLAG，否则会被LDNS递归时拒绝
+                     */
+                    $AdditionalRRs='0000';
+                    $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query;
+                    return Dns::send($response,$buffer->query,$buffer->info);
+                }elseif($buffer->flag=='SERVFAIL'){
+                    $status='8182';
+                    $questions='0001';
+                    $AnswerRRs='0000';
+                    $AuthorityRRs='0000';
+                    $AdditionalRRs='0000';
+                    $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query;
+                    return Dns::send($response,$buffer->query,$buffer->info);
+                }elseif($buffer->flag=='REFUSE'){
+                    $status='8185';
+                    $questions='0001';
+                    $AnswerRRs='0000';
+                    $AuthorityRRs='0000';
+                    $AdditionalRRs='0000';
+                    $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query;
+                    return Dns::send($response,$buffer->query,$buffer->info);
+                }
+            break;
             case 'A':
                 $type='0001';
                 #$lenth='0004';
@@ -150,7 +191,7 @@ class Dns
                 $AnswerRRs=str_pad((count((array)$ip)+1),4,"0",STR_PAD_LEFT);
 
                 $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query.$answer;
-                return hex2bin($response);
+                return Dns::send($response,$buffer->query,$buffer->info);
 
             break;
             case 'CNAME+AAAA':
@@ -201,14 +242,14 @@ class Dns
                 $AnswerRRs=str_pad((count((array)$ip)+1),4,"0",STR_PAD_LEFT);
 
                 $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query.$answer;
-                return hex2bin($response);
+                return Dns::send($response,$buffer->query,$buffer->info);
 
             break;
             case 'SOA':
                 $type='0006';
                 $ns=$buffer->detail;
                 $ns=json_decode( json_encode( $ns),true);
-                if($ns['type']=='none'){
+                if($ns['type']=='auto'){
                     $Rns=dns_get_record($ns['name'],DNS_SOA);
                     $Rns=$Rns[0];
                     $ns=$Rns;
@@ -282,24 +323,31 @@ class Dns
             case 'none':
                 $type='0006';
                 $ns=$buffer->detail;
-                $url=$ns;
-                while(true){
-                preg_match("#\.(.*)#i",$url,$match);//获取根域名
-                $domin = $match[1];
-                $soa=dns_get_record($domin,DNS_SOA);
-                if(array_key_exists('0',$soa)){
-                    if(array_key_exists('mname',$soa[0])){
-                    $qname=$domin;
-                    $ns=$soa[0];
-                    break;
+                $ns=json_decode( json_encode( $ns),true);
+                var_dump($ns);
+                
+                    if($ns['type']=='auto'){
+                        $ns=$ns['name'];
+                        $url=$ns;
+                        while(true){
+                            preg_match("#\.(.*)#i",$url,$match);//获取根域名
+                            $domin = $match[1];
+                            $soa=dns_get_record($domin,DNS_SOA);
+                            if(array_key_exists('0',$soa)){
+                                if(array_key_exists('mname',$soa[0])){
+                                    $qname=$domin;
+                                    $ns=$soa[0];
+                                    break;
+                                }else{
+                                    $url=$domin;
+                                }
+                            }else{
+                                $url=$domin;
+                            }
+                        }
                     }else{
-                        $url=$domin;
+                        $qname=$ns['qname'];
                     }
-                }else{
-                    $url=$domin;
-                }
-                }
-
                     $nss=explode('.',$ns['mname']);
                     $detail='';
                     foreach($nss as $part){
@@ -340,7 +388,7 @@ class Dns
                     $answer='';                    
                     $answer=$answer.$qname.$type.'0001'.$ttl.$lenth.$detail;
                     $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query.$answer;
-                    return hex2bin($response);
+                    return Dns::send($response,$buffer->query,$buffer->info);
             break;
         }
         $ttl=str_pad(dechex($buffer->ttl),8,"0",STR_PAD_LEFT);
@@ -358,7 +406,8 @@ class Dns
             $answer=$answer.'C00C'.$type.'0001'.$ttl.$rlenth.$c;
         }
         $response=$buffer->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$buffer->query.$answer;
-        return hex2bin($response);
+        $traffic=strlen(hex2bin($response));
+        return Dns::send($response,$buffer->query,$buffer->info);
     }
 
     /**
@@ -369,12 +418,27 @@ class Dns
      */
     public static function decode($buffer)
     {
-    /** 
-        $data=bin2hex($buffer);
-        echo $data;
-        $id=substr($data,0,4);
-        $flag=substr($data,5,4);
-    $type=substr($data,-8,4);
+        $traffic=strlen($buffer);#接收流量
+    $data=bin2hex($buffer);
+    $id=substr($data,0,4);
+    $flag=substr($data,4,4);
+    $questions=substr($data,8,4);
+    $answerRRs=substr($data,12,4);
+    $authorityRRs=substr($data,16,4);
+    $additionalRRs=substr($data,20,4);
+    $startbyte=24;
+    $dlen=substr($data,$startbyte,2);
+    $startbyte=26;
+    $i=1;
+    while($dlen!='00'){
+    $domain[$i]=hex2bin(substr($data,$startbyte,hexdec($dlen)*2));
+    $startbyte=$startbyte+(hexdec($dlen)*2);
+    $dlen=substr($data,$startbyte,2);
+    $startbyte=$startbyte+2;
+    $i++;
+    }
+    $realname=join(".",$domain);
+    $type=substr($data,$startbyte,4);
     switch($type){
         case '0001':
             $type='A';
@@ -401,71 +465,10 @@ class Dns
             $type='MX';
             break;                                
     }
-    $name=substr($data,24,-8);
-    $namede=str_split($name,2);
-    $realname='';
-    foreach($namede as $cha){
-        $chat=hex2bin($cha);
-        if(!ctype_alnum($chat)){
-            $chat='.';
-        }
-        $realname=$realname.$chat;
-    }
-    $realname=substr($realname,1,-1);
-    $query=substr($data,24);
-    ***/
-
-    #$returndata="$type".'|||'."$realname";
-    $data=bin2hex($buffer);
-    $id=substr($data,0,4);
-$flag=substr($data,4,4);
-$questions=substr($data,8,4);
-$answerRRs=substr($data,12,4);
-$authorityRRs=substr($data,16,4);
-$additionalRRs=substr($data,20,4);
-$startbyte=24;
-$dlen=substr($data,$startbyte,2);
-$startbyte=26;
-$i=1;
-while($dlen!='00'){
-$domain[$i]=hex2bin(substr($data,$startbyte,hexdec($dlen)*2));
-$startbyte=$startbyte+(hexdec($dlen)*2);
-$dlen=substr($data,$startbyte,2);
-$startbyte=$startbyte+2;
-$i++;
-}
-$realname=join(".",$domain);
-$type=substr($data,$startbyte,4);
-switch($type){
-    case '0001':
-        $type='A';
-        break;
-    case '0002':
-        $type='NS';
-        break;
-    case '000c':
-        $type='PTR';
-        break;
-    case '0006':
-        $type='SOA';
-        break;
-    case '001c':
-        $type='AAAA';
-        break;
-    case '0005':
-        $type='CNAME';
-        break;
-    case '0010':
-        $type='TEXT';
-        break;
-    case '000f':
-        $type='MX';
-        break;                                
-}
-$query=substr($data,24,$startbyte-16);
+    $query=substr($data,24,$startbyte-16);
 
 
-    $returndata= json_encode(array('type' => $type, 'name' => "$realname", 'id'=>"$id", 'query'=>"$query"));
+    $returndata= json_encode(array('type' => $type, 'name' => "$realname", 'id'=>"$id", 'query'=>"$query",'traffic'=>$traffic));
 
         return $returndata;
     }

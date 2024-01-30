@@ -21,10 +21,6 @@ $type=$data->type; #查询类型
 $name=$data->name; #查询内容(一般是域名，PTR时为倒序IP)
 $rip=$connection->getRemoteIp(); #客户端IP
 
-#输出信息
-echo "\n Type:$type \n Domain: $name\n Client IP: $rip \n";
-
-
 if($type=='A'){
     $send['type']='A';
     $send['detail'][1]='119.29.29.29';
@@ -62,13 +58,6 @@ if($type=='NS'){
 };
 
 #实际情况下很少直接返回CNAME，真实情况一般是CNAME+A同时还有CNAME+AAAA
-if($type=='CNAME'){
-    $send['type']='CNAME';
-    $send['detail'][1]='baidu.cn';
-    $send['detail'][2]='baidu.com';
-    $send['ttl']=600;
-}
-
 if($type=='CNAME'){
     $send['type']='CNAME';
     $send['detail'][1]='baidu.cn';
@@ -114,7 +103,7 @@ if($type=='SOA'){
     $send['type']='SOA';
     $send['detail']= array();
 
-    $send['detail']['type']='none';
+    $send['detail']['type']='auto';#自动获取上级的SOA
     $send['detail']['name']=$name;
     
     /**
@@ -138,18 +127,78 @@ if($type=='SOA'){
 }
 
 #返回域名不存在(自动获取SOA)
-if($name=='phpisthebestlanguage.com'){
+if($name=='1.phpisthebestlanguage.com'){
     $send['type']='none';
-    $send['detail']="$name";
+    $send['detail']= array();
+    $send['detail']['type']='auto';
+    $send['detail']['name']="$name";
+    /**
+     * none类型将返回NXDOMAIN，同时通过自动获取SOA返回SOA记录。
+     */
+    /**
+     * 
+     * 手动自行返回SOA记录(如果为权威服务器时)
+     * $send['detail']['type']='self';
+     * $send['detail']['mname']='dns31.hichina.com'; #主DNS服务器名
+     * $send['detail']['rname']='hostmaster.hichina.com'; #DNS管理员邮箱
+     * $send['detail']['serial']='2022052002'; #序列号 序列号必须递增 类似于dns记录的版本号 序列号变大时递归dns将更新记录
+     * $send['detail']['refresh']='3600'; #区域应当被刷新前的时间间隔
+     * $send['detail']['retry']='1200'; #刷新失败重试的时间间隔
+     * $send['detail']['expire']='86400'; #规定在区域不再是权威的之前可以等待的时间间隔的上限
+     * $send['detail']['minimum-ttl']='600'; #最小TTL 
+     * 
+     * $send['ttl']='180'; #当前TTL 
+     **/
 }
-
-
-
+if($name=='2.phpisthebestlanguage.com'){
+    $send['type']='none';
+    $send['detail']= array();
+    $send['detail']['type']='self';
+    #手动自行返回SOA记录与NXDOMAIN时的示例
+    $send['detail']['qname']='phpisthebestlanguage.com';#根域名
+    $send['detail']['mname']='dns31.hichina.com'; #主DNS服务器名
+    $send['detail']['rname']='hostmaster.hichina.com'; #DNS管理员邮箱
+    $send['detail']['serial']='2022052002'; #序列号 序列号必须递增 类似于dns记录的版本号 序列号变大时递归dns将更新记录
+    $send['detail']['refresh']='3600'; #区域应当被刷新前的时间间隔
+    $send['detail']['retry']='1200'; #刷新失败重试的时间间隔
+    $send['detail']['expire']='86400'; #规定在区域不再是权威的之前可以等待的时间间隔的上限
+    $send['detail']['minimum-ttl']='600'; #最小TTL 
+    $send['ttl']='180'; #当前TTL 
+}
+if($name=='404.testdnsserver.com'){
+    $send['type']='flag';
+    $send['flag']='NXDOMAIN';
+    #使用flag类型返回NXDOMAIN时不会附带SOA,当作为权威DNS时可能造成LDNS发生错误,不建议使用,建议改为none类型
+}
+if($name=='503.testdnsserver.com'){
+    $send['type']='flag';
+    $send['flag']='SERVFAIL';
+    #SERVFAIL表示解析遇到错误,类似于HTTP的503
+}
+if($name=='403.testdnsserver.com'){
+    $send['type']='flag';
+    $send['flag']='REFUSE';
+    #REFUSE表示服务器拒绝此请求,可用于限定客户端的IP范围
+}
+if($name=='raw.testdnsserver.com'){
+    $send['type']='raw';
+    $status='8180';
+    $questions='0001';
+    $AnswerRRs='0001';
+    $AuthorityRRs='0000';
+    $AdditionalRRs='0000';
+    $answer='c00c000c00010000001e001203646e73086c617973656e736503636f6d00';#此处示例为返回记录值为dns.laysense.com的PTR记录的16进制
+    $response=$data->id.$status.$questions.$AnswerRRs.$AuthorityRRs.$AdditionalRRs.$data->query.$answer;
+    $send['detail']=$response;
+}
 
 #id和query一般情况下直接返回输出即可
 $send['id']=$data->id;
 $send['query']=$data->query;
-
+if(!isset($send['ttl'])){
+    $send['ttl']=0;
+}
+$send['info']=json_encode(['domain'=>$data->name,'querytype'=>$data->type,'answertype'=>$send['type'],'ip'=>$rip,'ttl'=>$send['ttl'],'detail'=>$send['detail']]);
 
 
 $send=json_encode($send);

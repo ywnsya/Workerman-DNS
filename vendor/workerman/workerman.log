@@ -811,3 +811,247 @@ Stack trace:
 2024-01-29 08:29:51 pid:7583 Workerman[start.php] start in DEBUG mode
 2024-01-29 08:31:33 pid:7583 Workerman[start.php] stopping ...
 2024-01-29 08:31:33 pid:7583 Workerman[start.php] has been stopped
+2024-01-30 05:45:51 pid:3591 Workerman[start.php] start in DEBUG mode
+2024-01-30 05:56:47 pid:3591 Workerman[start.php] stopping ...
+2024-01-30 05:56:47 pid:3591 Workerman[start.php] has been stopped
+2024-01-30 05:56:47 pid:4659 Workerman[start.php] start in DEBUG mode
+2024-01-30 06:09:39 pid:4659 Workerman[start.php] stopping ...
+2024-01-30 06:09:39 pid:4659 Workerman[start.php] has been stopped
+2024-01-30 13:46:59 pid:14283 Workerman[start.php] start in DEBUG mode
+2024-01-30 13:47:51 pid:14284 Error: Cannot use object of type stdClass as array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:300
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#1 /www/Workerman-DNS/start.php(180): Workerman\Connection\UdpConnection->send()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#3 [internal function]: Workerman\Worker->acceptUdpConnection()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#10 /www/Workerman-DNS/start.php(184): Workerman\Worker::runAll()
+#11 {main}
+2024-01-30 13:47:51 pid:14283 worker[none:14284] exit with status 64000
+2024-01-30 13:47:53 pid:14283 Workerman[start.php] stopping ...
+2024-01-30 13:47:53 pid:14283 Workerman[start.php] has been stopped
+2024-01-30 13:49:09 pid:14608 Workerman[start.php] start in DEBUG mode
+2024-01-30 13:49:12 pid:14609 Error: Cannot use object of type stdClass as array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:301
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Connection/UdpConnection.php(73): Workerman\Protocols\Dns::encode()
+#1 /www/Workerman-DNS/start.php(180): Workerman\Connection\UdpConnection->send()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2569): {closure}()
+#3 [internal function]: Workerman\Worker->acceptUdpConnection()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#10 /www/Workerman-DNS/start.php(184): Workerman\Worker::runAll()
+#11 {main}
+2024-01-30 13:49:12 pid:14608 worker[none:14609] exit with status 64000
+2024-01-30 13:49:53 pid:14608 Workerman[start.php] stopping ...
+2024-01-30 13:49:53 pid:14608 Workerman[start.php] has been stopped
+2024-01-30 13:49:53 pid:14716 Workerman[start.php] start in DEBUG mode
+2024-01-30 13:52:30 pid:14716 Workerman[start.php] stopping ...
+2024-01-30 13:52:30 pid:14716 Workerman[start.php] has been stopped
+2024-01-30 13:52:31 pid:15036 Workerman[start.php] start in DEBUG mode
+2024-01-30 13:57:14 pid:15036 Workerman[start.php] stopping ...
+2024-01-30 13:57:14 pid:15036 Workerman[start.php] has been stopped
+2024-01-30 13:57:14 pid:15609 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:04:37 pid:15609 Workerman[start.php] stopping ...
+2024-01-30 14:04:37 pid:15609 Workerman[start.php] has been stopped
+2024-01-30 14:04:40 pid:16331 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:05:39 pid:16331 Workerman[start.php] stopping ...
+2024-01-30 14:05:39 pid:16331 Workerman[start.php] has been stopped
+2024-01-30 14:05:40 pid:16528 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:06:02 pid:16528 Workerman[start.php] stopping ...
+2024-01-30 14:06:02 pid:16528 Workerman[start.php] has been stopped
+2024-01-30 14:06:03 pid:16617 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:12:35 pid:16617 Workerman[start.php] stopping ...
+2024-01-30 14:12:35 pid:16617 Workerman[start.php] has been stopped
+2024-01-30 14:12:35 pid:17252 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:12:53 pid:17252 Workerman[start.php] stopping ...
+2024-01-30 14:12:53 pid:17252 Workerman[start.php] has been stopped
+2024-01-30 14:12:53 pid:17320 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:13:28 pid:17320 Workerman[start.php] stopping ...
+2024-01-30 14:13:28 pid:17320 Workerman[start.php] has been stopped
+2024-01-30 14:13:29 pid:17415 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:13:54 pid:17415 Workerman[start.php] stopping ...
+2024-01-30 14:13:54 pid:17415 Workerman[start.php] has been stopped
+2024-01-30 14:13:54 pid:17489 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:15:00 pid:17489 Workerman[start.php] stopping ...
+2024-01-30 14:15:00 pid:17489 Workerman[start.php] has been stopped
+2024-01-30 14:15:01 pid:17626 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:17:41 pid:17626 Workerman[start.php] stopping ...
+2024-01-30 14:17:41 pid:17626 Workerman[start.php] has been stopped
+2024-01-30 14:17:41 pid:17913 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:18:25 pid:17913 Workerman[start.php] stopping ...
+2024-01-30 14:18:25 pid:17913 Workerman[start.php] has been stopped
+2024-01-30 14:18:26 pid:18020 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:19:30 pid:18020 Workerman[start.php] stopping ...
+2024-01-30 14:19:30 pid:18020 Workerman[start.php] has been stopped
+2024-01-30 14:19:30 pid:18154 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:20:59 pid:18154 Workerman[start.php] stopping ...
+2024-01-30 14:20:59 pid:18154 Workerman[start.php] has been stopped
+2024-01-30 14:21:01 pid:18337 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:21:22 pid:18337 Workerman[start.php] stopping ...
+2024-01-30 14:21:22 pid:18337 Workerman[start.php] has been stopped
+2024-01-30 14:21:22 pid:18429 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:22:16 pid:18429 Workerman[start.php] stopping ...
+2024-01-30 14:22:16 pid:18429 Workerman[start.php] has been stopped
+2024-01-30 14:22:17 pid:18587 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:22:58 pid:18587 Workerman[start.php] stopping ...
+2024-01-30 14:22:58 pid:18587 Workerman[start.php] has been stopped
+2024-01-30 14:22:58 pid:18693 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:23:11 pid:18693 Workerman[start.php] stopping ...
+2024-01-30 14:23:11 pid:18693 Workerman[start.php] has been stopped
+2024-01-30 14:23:12 pid:18755 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:23:29 pid:18755 Workerman[start.php] stopping ...
+2024-01-30 14:23:29 pid:18755 Workerman[start.php] has been stopped
+2024-01-30 14:23:29 pid:18817 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:23:56 pid:18817 Workerman[start.php] stopping ...
+2024-01-30 14:23:56 pid:18817 Workerman[start.php] has been stopped
+2024-01-30 14:23:57 pid:18912 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:31:03 pid:18912 Workerman[start.php] stopping ...
+2024-01-30 14:31:03 pid:18912 Workerman[start.php] has been stopped
+2024-01-30 14:31:14 pid:19625 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:31:33 pid:19625 Workerman[start.php] stopping ...
+2024-01-30 14:31:33 pid:19625 Workerman[start.php] has been stopped
+2024-01-30 14:31:34 pid:19693 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:35:02 pid:19693 Workerman[start.php] stopping ...
+2024-01-30 14:35:02 pid:19693 Workerman[start.php] has been stopped
+2024-01-30 14:35:02 pid:20047 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:35:05 pid:20048 Error: Call to undefined function Workerman\Protocols\test() in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:25
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2561): Workerman\Protocols\Dns::input()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/start.php(208): Workerman\Worker::runAll()
+#9 {main}
+2024-01-30 14:35:05 pid:20047 worker[none:20048] exit with status 64000
+2024-01-30 14:35:07 pid:20067 Error: Call to undefined function Workerman\Protocols\test() in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:25
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2561): Workerman\Protocols\Dns::input()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(208): Workerman\Worker::runAll()
+#11 {main}
+2024-01-30 14:35:07 pid:20047 worker[none:20067] exit with status 64000
+2024-01-30 14:35:09 pid:20074 Error: Call to undefined function Workerman\Protocols\test() in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:25
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2561): Workerman\Protocols\Dns::input()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(208): Workerman\Worker::runAll()
+#11 {main}
+2024-01-30 14:35:09 pid:20047 worker[none:20074] exit with status 64000
+2024-01-30 14:35:11 pid:20093 Error: Call to undefined function Workerman\Protocols\test() in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:25
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2561): Workerman\Protocols\Dns::input()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(208): Workerman\Worker::runAll()
+#11 {main}
+2024-01-30 14:35:11 pid:20047 worker[none:20093] exit with status 64000
+2024-01-30 14:35:13 pid:20097 Error: Call to undefined function Workerman\Protocols\test() in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:25
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2561): Workerman\Protocols\Dns::input()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(208): Workerman\Worker::runAll()
+#11 {main}
+2024-01-30 14:35:13 pid:20047 worker[none:20097] exit with status 64000
+2024-01-30 14:35:16 pid:20047 Workerman[start.php] stopping ...
+2024-01-30 14:35:16 pid:20047 Workerman[start.php] has been stopped
+2024-01-30 14:35:17 pid:20128 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:35:18 pid:20129 Worker[20129] process terminated with ERROR: E_ERROR "Cannot redeclare Workerman\Protocols\test() (previously declared in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:24) in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php on line 23"
+2024-01-30 14:35:18 pid:20128 worker[none:20129] exit with status 65280
+2024-01-30 14:35:52 pid:20128 Workerman[start.php] stopping ...
+2024-01-30 14:35:52 pid:20128 Workerman[start.php] has been stopped
+2024-01-30 14:35:52 pid:20231 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:35:57 pid:20232 Error: Call to undefined function Workerman\Protocols\test() in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:26
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2561): Workerman\Protocols\Dns::input()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/start.php(208): Workerman\Worker::runAll()
+#9 {main}
+2024-01-30 14:35:57 pid:20231 worker[none:20232] exit with status 64000
+2024-01-30 14:36:40 pid:20231 Workerman[start.php] stopping ...
+2024-01-30 14:36:40 pid:20231 Workerman[start.php] has been stopped
+2024-01-30 14:36:45 pid:20379 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:39:24 pid:20379 Workerman[start.php] stopping ...
+2024-01-30 14:39:24 pid:20379 Workerman[start.php] has been stopped
+2024-01-30 14:39:24 pid:20664 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:40:04 pid:20664 Workerman[start.php] stopping ...
+2024-01-30 14:40:04 pid:20664 Workerman[start.php] has been stopped
+2024-01-30 14:40:05 pid:20769 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:40:10 pid:20769 Workerman[start.php] stopping ...
+2024-01-30 14:40:10 pid:20769 Workerman[start.php] has been stopped
+2024-01-30 14:40:52 pid:20903 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:57:37 pid:20903 Workerman[start.php] stopping ...
+2024-01-30 14:57:37 pid:20903 Workerman[start.php] has been stopped
+2024-01-30 14:57:38 pid:22573 Workerman[start.php] start in DEBUG mode
+2024-01-30 14:58:21 pid:22573 Workerman[start.php] stopping ...
+2024-01-30 14:58:21 pid:22573 Workerman[start.php] has been stopped
+2024-01-30 14:58:22 pid:22698 Workerman[start.php] start in DEBUG mode
+2024-01-30 15:05:04 pid:22698 Workerman[start.php] stopping ...
+2024-01-30 15:05:04 pid:22698 Workerman[start.php] has been stopped
+2024-01-30 15:05:05 pid:23387 Workerman[start.php] start in DEBUG mode
+2024-01-30 15:05:49 pid:23387 Workerman[start.php] stopping ...
+2024-01-30 15:05:49 pid:23387 Workerman[start.php] has been stopped
+2024-01-30 15:05:50 pid:23494 Workerman[start.php] start in DEBUG mode
+2024-01-30 15:07:52 pid:23494 Workerman[start.php] stopping ...
+2024-01-30 15:07:52 pid:23494 Workerman[start.php] has been stopped
+2024-01-30 15:07:53 pid:23741 Workerman[start.php] start in DEBUG mode
+2024-01-30 15:07:58 pid:23741 Workerman[start.php] stopping ...
+2024-01-30 15:07:58 pid:23741 Workerman[start.php] has been stopped
+2024-01-30 15:07:58 pid:23769 Workerman[start.php] start in DEBUG mode
+2024-01-30 15:08:05 pid:23769 Workerman[start.php] stopping ...
+2024-01-30 15:08:05 pid:23769 Workerman[start.php] has been stopped
+2024-01-30 15:08:06 pid:23825 Workerman[start.php] start in DEBUG mode
+2024-01-30 15:16:03 pid:23825 Workerman[start.php] stopping ...
+2024-01-30 15:16:03 pid:23825 Workerman[start.php] has been stopped
+2024-01-30 16:25:24 pid:30921 Workerman[start.php] start in DEBUG mode
+2024-01-30 16:25:31 pid:30921 Workerman[start.php] stopping ...
+2024-01-30 16:25:31 pid:30921 Workerman[start.php] has been stopped
