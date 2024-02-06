@@ -10,11 +10,27 @@
 namespace Workerman\Protocols;
 class Dns
 {
+    public static function getDomain($data,$startbyte){
+        $dlen=substr($data,$startbyte,2);
+        $startbyte=$startbyte+2;
+        $domain[0]='';
+        $i=0;
+        while($dlen!='00'){
+            $domain[$i]=hex2bin(substr($data,$startbyte,hexdec($dlen)*2));
+            $startbyte=$startbyte+(hexdec($dlen)*2);
+            $dlen=substr($data,$startbyte,2);
+            $startbyte=$startbyte+2;
+            $i++;
+        }
+        $realname=join(".",$domain);
+        $return=['name'=>$realname,'startbyte'=>$startbyte];
+        return $return;
+    }
     public static function send($response,$query,$info){
        $response=hex2bin($response);
        $traffic=strlen($response);
        $info=json_decode($info);
-       #var_dump($info);
+       var_dump($info);
        #出流量统计
        #您也可以在此处保存$response,下一次通过raw类型实现快速缓存相应.
        return $response;
@@ -426,18 +442,9 @@ class Dns
     $answerRRs=substr($data,12,4);
     $authorityRRs=substr($data,16,4);
     $additionalRRs=substr($data,20,4);
-    $startbyte=24;
-    $dlen=substr($data,$startbyte,2);
-    $startbyte=26;
-    $i=1;
-    while($dlen!='00'){
-    $domain[$i]=hex2bin(substr($data,$startbyte,hexdec($dlen)*2));
-    $startbyte=$startbyte+(hexdec($dlen)*2);
-    $dlen=substr($data,$startbyte,2);
-    $startbyte=$startbyte+2;
-    $i++;
-    }
-    $realname=join(".",$domain);
+    $gdomain=Dns::getDomain($data,24);
+    $realname=$gdomain['name'];
+    $startbyte=$gdomain['startbyte'];
     $type=substr($data,$startbyte,4);
     switch($type){
         case '0001':
@@ -466,9 +473,54 @@ class Dns
             break;                                
     }
     $query=substr($data,24,$startbyte-16);
+    #additionalRRs
+    if($authorityRRs=='0000'&&$additionalRRs=='0001'){
+        $addR=new \StdClass();
+        $startbyte=$startbyte+8;
+        $addR_name=Dns::getDomain($data,$startbyte);
+        $addR_rname=$addR_name['name'];
+        $startbyte=$addR_name['startbyte'];
+        if($addR_rname==''){
+            $addR_rname=$realname;
+        }
+        $addR_type=substr($data,$startbyte,4);
+        $startbyte=$startbyte+4;
+        $addR->realname=$addR_rname;
+        $addR->type=$addR_type;
+        #OPT
+        if($addR_type=='0029'){
+            #dns.rr.udp_playload_size,请求定义该值后响应将可突破512byte默认限制
+            $addR->playloadSize=hexdec(substr($data,$startbyte,4));
+            $addR->rcode=substr($data,$startbyte+4,2);#dns.resp.ext_rcode
+            $addR->edns0v=substr($data,$startbyte+6,2);#Edns0 拓展协议版本
+            $addR->Z=substr($data,$startbyte+8,4);
+            $addR->optLen=hexdec(substr($data,$startbyte+12,4))*2;
+            if($addR->optLen!=0){
+                $startbyte=$startbyte+16;
+                $opt=substr($data,$startbyte,$addR->optLen);
+                $opt_type=substr($opt,0,4);
+                if($opt_type=='0008'){
+                    $addR->opt_type='CSUBNET';
+                    $csubnet_len=hexdec(substr($opt,4,4))*2;
+                    $csubnet_data=substr($opt,8,$csubnet_len);
+                    $csubnet_family=substr($csubnet_data,0,4);
+                    #IPv4
+                    if($csubnet_family=='0001'){
+                        $csubnet_source=substr($csubnet_data,4,2);
+                        $csubnet_scope=substr($csubnet_data,6,2);
+                        $csubnet_ip=long2ip(hexdec(substr(substr($csubnet_data,8,$csubnet_len-8).'00000000',0,8)));
+                        $addR->csubnet=['family'=>$csubnet_family,'source'=>$csubnet_source,'scope'=>$csubnet_scope,'ip'=>$csubnet_ip];
+                    }
+                }
+
+            }
+        }
+    }else{
+        $addR=null;
+    }
 
 
-    $returndata= json_encode(array('type' => $type, 'name' => "$realname", 'id'=>"$id", 'query'=>"$query",'traffic'=>$traffic));
+    $returndata= json_encode(array('type' => $type, 'name' => "$realname", 'id'=>"$id", 'query'=>"$query",'traffic'=>$traffic,'addR'=>$addR));
 
         return $returndata;
     }

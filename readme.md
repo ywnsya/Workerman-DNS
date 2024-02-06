@@ -17,6 +17,7 @@
     - 8182：SERVFAIL≈HTTP503 ：服务器错误
     - 8183：NXDOMAIN≈HTTP404 ：记录不存在
     - 8185：REFUSE≈HTTP403：拒绝请求
+- EDNS SubnetIP支持(当通过递归服务器发送请求时，可获取到真实请求服务器的IP段)
 
 # 安装
 
@@ -129,7 +130,11 @@ $data=json_decode($data);
 $type=$data->type; #查询类型
 $name=$data->name; #查询内容(一般是域名，PTR时为倒序IP)
 $rip=$connection->getRemoteIp(); #客户端IP
-
+if(isset($data->addR->csubnet->ip)){
+    $ip=$data->addR->csubnet->ip;
+}else{
+    $ip=$rip;
+}
 # 请在下方编写您的DNS响应
 #——————————————————————
 
@@ -140,7 +145,7 @@ $send['query']=$data->query;
 if(!isset($send['ttl'])){
     $send['ttl']=0;
 }
-$send['info']=json_encode(['domain'=>$data->name,'querytype'=>$data->type,'answertype'=>$send['type'],'ip'=>$rip,'ttl'=>$send['ttl'],'detail'=>$send['detail']]);
+$send['info']=json_encode(['domain'=>$data->name,'querytype'=>$data->type,'answertype'=>$send['type'],'ip'=>$ip,'rip'=>$rip,'ttl'=>$send['ttl'],'detail'=>$send['detail']]);
 $send=json_encode($send);
 $connection->send($send);
 };
@@ -159,6 +164,19 @@ Worker::runAll();
 
 # 编写响应：
 
+### 响应参数
+
+您最终需要回复一个$send的数组。定义如下：
+
+| 名称 | 意义 | 类型 | 示例 | 说明 |
+| --- | --- | --- | --- | --- |
+| $send['type'] | 响应类型 | 字符串 | $send['type']=A | 指定响应的类型 |
+| $send['detail'] | 响应内容 | 字符串、数组、多维数组 | 119.29.29.29或$send['detail'][1]='119.29.29.29'或$send['detail']= array(); | 根据不同的响应类型，返回不同的响应。具请往下阅读各种记录的响应方式 |
+| $send['ttl'] | TTL缓存时间 | 数字 | $send['ttl']=600 | 并非所有记录都需要TTL，未传入时默认0 |
+| $send['flag'] | Flag类型 | 字符串 | $send['flag']=‘REFUSE’ | 使用flag类型时需指定的flag |
+| $send['id'] | ID | 数字 | 0001 | 无需更改无需编写。 |
+| $send['query'] | 请求体 | 16进制 |  | 无需更改无需编写。 |
+| $send['info'] | 请求和响应信息 | json |  | 无需编写，基础框架内已经完成。 |
 
 您应当根据$name变量，进行响应。
 
@@ -465,6 +483,26 @@ object(stdClass)#18 (6) {
 
 其中对于流量将传递$data->traffic变量，其为请求包体的大小(Byte)
 
+# EDNS Subnet IP
+
+这是一个DNS协议的扩展。支持的递归DNS服务器会向权威DNS发送请求客户端的IP地址。
+
+WorkermanDNS支持对该协议提供的IPv4进行解析。
+
+通过我们在上述示例框架start.php中的代码：
+
+```php
+if(isset($data->addR->csubnet->ip)){
+    $ip=$data->addR->csubnet->ip;
+}else{
+    $ip=$rip;
+}
+```
+
+$ip参数将在支持EDNS SubnetIP的情况下优先使用SubnetIP，不存在时则使用连接到的对端IP。
+
+对于写入后端记录时，rip与ip 参数都会始终提供。当不支持EDNS SubnetIP时，rip与ip相同。否则，ip是EDNS SubnetIP，rip是udp对端IP。
+
 # 运行
 
 使用
@@ -481,7 +519,11 @@ object(stdClass)#18 (6) {
 
 DNS服务使用53端口，为特权端口，绝大多数情况下必须使用root权限运行。
 
-### 版本
+### 版本记录
+
+[Current]0.1.1@2024/02/06
+
+添加Edns SubnetIP支持
 
 0.1.0@2024/01/31
 

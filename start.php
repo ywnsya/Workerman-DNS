@@ -20,6 +20,12 @@ $data=json_decode($data);
 $type=$data->type; #查询类型
 $name=$data->name; #查询内容(一般是域名，PTR时为倒序IP)
 $rip=$connection->getRemoteIp(); #客户端IP
+if(isset($data->addR->csubnet->ip)){
+    $ip=$data->addR->csubnet->ip;
+}else{
+    $ip=$rip;
+}
+
 
 if($type=='A'){
     $send['type']='A';
@@ -198,7 +204,7 @@ $send['query']=$data->query;
 if(!isset($send['ttl'])){
     $send['ttl']=0;
 }
-$send['info']=json_encode(['domain'=>$data->name,'querytype'=>$data->type,'answertype'=>$send['type'],'ip'=>$rip,'ttl'=>$send['ttl'],'detail'=>$send['detail']]);
+$send['info']=json_encode(['domain'=>$data->name,'querytype'=>$data->type,'answertype'=>$send['type'],'ip'=>$ip,'rip'=>$rip,'ttl'=>$send['ttl'],'detail'=>$send['detail']]);
 
 
 $send=json_encode($send);

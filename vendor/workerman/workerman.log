@@ -1055,3 +1055,1368 @@ Stack trace:
 2024-01-30 16:25:24 pid:30921 Workerman[start.php] start in DEBUG mode
 2024-01-30 16:25:31 pid:30921 Workerman[start.php] stopping ...
 2024-01-30 16:25:31 pid:30921 Workerman[start.php] has been stopped
+2024-02-06 09:08:40 pid:8583 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:14:01 pid:8583 Workerman[start.php] stopping ...
+2024-02-06 09:14:01 pid:8583 Workerman[start.php] has been stopped
+2024-02-06 09:14:02 pid:9155 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:14:33 pid:9155 Workerman[start.php] stopping ...
+2024-02-06 09:14:33 pid:9155 Workerman[start.php] has been stopped
+2024-02-06 09:14:33 pid:9241 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:14:35 pid:9242 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#9 {main}
+2024-02-06 09:14:35 pid:9241 worker[none:9242] exit with status 64000
+2024-02-06 09:14:36 pid:9254 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:36 pid:9241 worker[none:9254] exit with status 64000
+2024-02-06 09:14:36 pid:9264 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:36 pid:9241 worker[none:9264] exit with status 64000
+2024-02-06 09:14:36 pid:9265 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:36 pid:9241 worker[none:9265] exit with status 64000
+2024-02-06 09:14:36 pid:9266 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:36 pid:9241 worker[none:9266] exit with status 64000
+2024-02-06 09:14:36 pid:9267 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:36 pid:9241 worker[none:9267] exit with status 64000
+2024-02-06 09:14:36 pid:9268 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:36 pid:9241 worker[none:9268] exit with status 64000
+2024-02-06 09:14:36 pid:9269 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:36 pid:9241 worker[none:9269] exit with status 64000
+2024-02-06 09:14:37 pid:9270 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:37 pid:9241 worker[none:9270] exit with status 64000
+2024-02-06 09:14:37 pid:9271 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:37 pid:9241 worker[none:9271] exit with status 64000
+2024-02-06 09:14:37 pid:9272 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:37 pid:9241 worker[none:9272] exit with status 64000
+2024-02-06 09:14:37 pid:9273 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:37 pid:9241 worker[none:9273] exit with status 64000
+2024-02-06 09:14:37 pid:9274 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:37 pid:9241 worker[none:9274] exit with status 64000
+2024-02-06 09:14:38 pid:9275 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:38 pid:9241 worker[none:9275] exit with status 64000
+2024-02-06 09:14:38 pid:9279 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:38 pid:9241 worker[none:9279] exit with status 64000
+2024-02-06 09:14:38 pid:9280 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:38 pid:9241 worker[none:9280] exit with status 64000
+2024-02-06 09:14:38 pid:9281 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:38 pid:9241 worker[none:9281] exit with status 64000
+2024-02-06 09:14:38 pid:9285 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:38 pid:9241 worker[none:9285] exit with status 64000
+2024-02-06 09:14:38 pid:9286 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:38 pid:9241 worker[none:9286] exit with status 64000
+2024-02-06 09:14:39 pid:9287 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:39 pid:9241 worker[none:9287] exit with status 64000
+2024-02-06 09:14:39 pid:9296 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:39 pid:9241 worker[none:9296] exit with status 64000
+2024-02-06 09:14:40 pid:9297 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:40 pid:9241 worker[none:9297] exit with status 64000
+2024-02-06 09:14:40 pid:9298 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:40 pid:9241 worker[none:9298] exit with status 64000
+2024-02-06 09:14:41 pid:9308 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:41 pid:9241 worker[none:9308] exit with status 64000
+2024-02-06 09:14:41 pid:9309 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:41 pid:9241 worker[none:9309] exit with status 64000
+2024-02-06 09:14:41 pid:9310 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:41 pid:9241 worker[none:9310] exit with status 64000
+2024-02-06 09:14:41 pid:9311 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:41 pid:9241 worker[none:9311] exit with status 64000
+2024-02-06 09:14:42 pid:9312 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:42 pid:9241 worker[none:9312] exit with status 64000
+2024-02-06 09:14:44 pid:9316 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:44 pid:9241 worker[none:9316] exit with status 64000
+2024-02-06 09:14:44 pid:9323 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:44 pid:9241 worker[none:9323] exit with status 64000
+2024-02-06 09:14:44 pid:9332 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:44 pid:9241 worker[none:9332] exit with status 64000
+2024-02-06 09:14:45 pid:9333 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:45 pid:9241 worker[none:9333] exit with status 64000
+2024-02-06 09:14:47 pid:9340 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:47 pid:9241 worker[none:9340] exit with status 64000
+2024-02-06 09:14:47 pid:9344 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:47 pid:9241 worker[none:9344] exit with status 64000
+2024-02-06 09:14:47 pid:9345 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:47 pid:9241 worker[none:9345] exit with status 64000
+2024-02-06 09:14:48 pid:9346 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:48 pid:9241 worker[none:9346] exit with status 64000
+2024-02-06 09:14:50 pid:9350 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:50 pid:9241 worker[none:9350] exit with status 64000
+2024-02-06 09:14:51 pid:9369 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:51 pid:9241 worker[none:9369] exit with status 64000
+2024-02-06 09:14:51 pid:9370 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:51 pid:9241 worker[none:9370] exit with status 64000
+2024-02-06 09:14:52 pid:9371 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:52 pid:9241 worker[none:9371] exit with status 64000
+2024-02-06 09:14:54 pid:9375 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:54 pid:9241 worker[none:9375] exit with status 64000
+2024-02-06 09:14:55 pid:9387 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:55 pid:9241 worker[none:9387] exit with status 64000
+2024-02-06 09:14:55 pid:9394 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:55 pid:9241 worker[none:9394] exit with status 64000
+2024-02-06 09:14:59 pid:9395 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:14:59 pid:9241 worker[none:9395] exit with status 64000
+2024-02-06 09:15:00 pid:9410 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:00 pid:9241 worker[none:9410] exit with status 64000
+2024-02-06 09:15:00 pid:9417 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:00 pid:9241 worker[none:9417] exit with status 64000
+2024-02-06 09:15:04 pid:9421 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:04 pid:9241 worker[none:9421] exit with status 64000
+2024-02-06 09:15:05 pid:9436 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:05 pid:9241 worker[none:9436] exit with status 64000
+2024-02-06 09:15:05 pid:9443 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:05 pid:9241 worker[none:9443] exit with status 64000
+2024-02-06 09:15:09 pid:9444 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:09 pid:9241 worker[none:9444] exit with status 64000
+2024-02-06 09:15:10 pid:9462 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:10 pid:9241 worker[none:9462] exit with status 64000
+2024-02-06 09:15:10 pid:9469 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:10 pid:9241 worker[none:9469] exit with status 64000
+2024-02-06 09:15:14 pid:9473 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:14 pid:9241 worker[none:9473] exit with status 64000
+2024-02-06 09:15:15 pid:9491 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:15 pid:9241 worker[none:9491] exit with status 64000
+2024-02-06 09:15:15 pid:9498 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:491
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(215): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:15:15 pid:9241 worker[none:9498] exit with status 64000
+2024-02-06 09:15:22 pid:9241 Workerman[start.php] stopping ...
+2024-02-06 09:15:22 pid:9241 Workerman[start.php] has been stopped
+2024-02-06 09:15:23 pid:9536 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:15:39 pid:9536 Workerman[start.php] stopping ...
+2024-02-06 09:15:39 pid:9536 Workerman[start.php] has been stopped
+2024-02-06 09:15:39 pid:9597 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:16:45 pid:9597 Workerman[start.php] stopping ...
+2024-02-06 09:16:45 pid:9597 Workerman[start.php] has been stopped
+2024-02-06 09:16:45 pid:9750 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:16:48 pid:9751 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#9 {main}
+2024-02-06 09:16:48 pid:9750 worker[none:9751] exit with status 64000
+2024-02-06 09:16:48 pid:9773 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:48 pid:9750 worker[none:9773] exit with status 64000
+2024-02-06 09:16:48 pid:9774 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:48 pid:9750 worker[none:9774] exit with status 64000
+2024-02-06 09:16:49 pid:9775 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:49 pid:9750 worker[none:9775] exit with status 64000
+2024-02-06 09:16:50 pid:9782 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:50 pid:9750 worker[none:9782] exit with status 64000
+2024-02-06 09:16:50 pid:9783 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:50 pid:9750 worker[none:9783] exit with status 64000
+2024-02-06 09:16:51 pid:9784 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:51 pid:9750 worker[none:9784] exit with status 64000
+2024-02-06 09:16:52 pid:9793 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:52 pid:9750 worker[none:9793] exit with status 64000
+2024-02-06 09:16:53 pid:9803 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:53 pid:9750 worker[none:9803] exit with status 64000
+2024-02-06 09:16:53 pid:9804 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:53 pid:9750 worker[none:9804] exit with status 64000
+2024-02-06 09:16:53 pid:9805 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:53 pid:9750 worker[none:9805] exit with status 64000
+2024-02-06 09:16:53 pid:9806 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:53 pid:9750 worker[none:9806] exit with status 64000
+2024-02-06 09:16:55 pid:9807 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:55 pid:9750 worker[none:9807] exit with status 64000
+2024-02-06 09:16:58 pid:9814 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:58 pid:9750 worker[none:9814] exit with status 64000
+2024-02-06 09:16:58 pid:9839 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:58 pid:9750 worker[none:9839] exit with status 64000
+2024-02-06 09:16:58 pid:9840 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:58 pid:9750 worker[none:9840] exit with status 64000
+2024-02-06 09:16:58 pid:9841 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:16:58 pid:9750 worker[none:9841] exit with status 64000
+2024-02-06 09:17:01 pid:9842 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:01 pid:9750 worker[none:9842] exit with status 64000
+2024-02-06 09:17:03 pid:9857 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:03 pid:9750 worker[none:9857] exit with status 64000
+2024-02-06 09:17:03 pid:9867 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:03 pid:9750 worker[none:9867] exit with status 64000
+2024-02-06 09:17:03 pid:9868 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:03 pid:9750 worker[none:9868] exit with status 64000
+2024-02-06 09:17:04 pid:9869 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:04 pid:9750 worker[none:9869] exit with status 64000
+2024-02-06 09:17:08 pid:9876 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:08 pid:9750 worker[none:9876] exit with status 64000
+2024-02-06 09:17:08 pid:9895 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:08 pid:9750 worker[none:9895] exit with status 64000
+2024-02-06 09:17:08 pid:9899 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:08 pid:9750 worker[none:9899] exit with status 64000
+2024-02-06 09:17:14 pid:9900 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:14 pid:9750 worker[none:9900] exit with status 64000
+2024-02-06 09:17:19 pid:9928 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:19 pid:9750 worker[none:9928] exit with status 64000
+2024-02-06 09:17:24 pid:9955 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:24 pid:9750 worker[none:9955] exit with status 64000
+2024-02-06 09:17:29 pid:9978 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:29 pid:9750 worker[none:9978] exit with status 64000
+2024-02-06 09:17:34 pid:10003 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:17:34 pid:9750 worker[none:10003] exit with status 64000
+2024-02-06 09:17:59 pid:9750 Workerman[start.php] stopping ...
+2024-02-06 09:17:59 pid:9750 Workerman[start.php] has been stopped
+2024-02-06 09:18:00 pid:10093 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:18:11 pid:10093 Workerman[start.php] stopping ...
+2024-02-06 09:18:11 pid:10093 Workerman[start.php] has been stopped
+2024-02-06 09:18:11 pid:10145 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:18:16 pid:10146 Error: Class "Workerman\Protocols\StdClass" not found in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:478
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#9 {main}
+2024-02-06 09:18:16 pid:10145 worker[none:10146] exit with status 64000
+2024-02-06 09:18:17 pid:10168 Error: Class "Workerman\Protocols\StdClass" not found in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:478
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:18:17 pid:10145 worker[none:10168] exit with status 64000
+2024-02-06 09:19:11 pid:10145 Workerman[start.php] stopping ...
+2024-02-06 09:19:11 pid:10145 Workerman[start.php] has been stopped
+2024-02-06 09:19:11 pid:10289 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:19:14 pid:10290 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(557): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#9 {main}
+2024-02-06 09:19:14 pid:10289 worker[none:10290] exit with status 64000
+2024-02-06 09:19:15 pid:10312 Error: Attempt to assign property "playloadSize" on array in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php:492
+Stack trace:
+#0 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2566): Workerman\Protocols\Dns::decode()
+#1 [internal function]: Workerman\Worker->acceptUdpConnection()
+#2 /www/Workerman-DNS/vendor/workerman/workerman/Events/Event.php(193): EventBase->loop()
+#3 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(2463): Workerman\Events\Event->loop()
+#4 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1574): Workerman\Worker->run()
+#5 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1416): Workerman\Worker::forkOneWorkerForLinux()
+#6 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1390): Workerman\Worker::forkWorkersForLinux()
+#7 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1720): Workerman\Worker::forkWorkers()
+#8 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(1660): Workerman\Worker::monitorWorkersForLinux()
+#9 /www/Workerman-DNS/vendor/workerman/workerman/Worker.php(559): Workerman\Worker::monitorWorkers()
+#10 /www/Workerman-DNS/start.php(216): Workerman\Worker::runAll()
+#11 {main}
+2024-02-06 09:19:15 pid:10289 worker[none:10312] exit with status 64000
+2024-02-06 09:19:52 pid:10289 Workerman[start.php] stopping ...
+2024-02-06 09:19:52 pid:10289 Workerman[start.php] has been stopped
+2024-02-06 09:19:53 pid:10398 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:20:48 pid:10398 Workerman[start.php] stopping ...
+2024-02-06 09:20:48 pid:10398 Workerman[start.php] has been stopped
+2024-02-06 09:20:49 pid:10544 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:24:49 pid:10545 Worker[10545] process terminated with ERROR: E_ERROR "Allowed memory size of 134217728 bytes exhausted (tried to allocate 67108872 bytes) in /www/Workerman-DNS/vendor/workerman/workerman/Protocols/Dns.php on line 19"
+2024-02-06 09:24:49 pid:10544 worker[none:10545] exit with status 65280
+2024-02-06 09:31:13 pid:10544 Workerman[start.php] stopping ...
+2024-02-06 09:31:13 pid:10544 Workerman[start.php] has been stopped
+2024-02-06 09:32:14 pid:11698 Workerman[start.php] start in DEBUG mode
+2024-02-06 09:48:51 pid:11698 Workerman[start.php] stopping ...
+2024-02-06 09:48:51 pid:11698 Workerman[start.php] has been stopped
